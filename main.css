@@ -314,8 +314,6 @@ a {
   background: url("img/bg.jpg");
   background-size: cover;
   background-attachment: fixed;
-  display: flex;
-  justify-content: flex-end;
 }
 .container .project .leftct {
   height: 100vh;
@@ -326,6 +324,8 @@ a {
   flex-direction: column;
   padding: 50px 40px;
   border-left: 7px #39c088 solid;
+  position: absolute;
+  right: 0px;
 }
 .container .project .leftct h2 {
   margin-top: 10%;
@@ -449,7 +449,6 @@ a {
   padding-top: 20px;
   padding-left: 20px;
   padding-bottom: 20px;
-  float: left;
 }
 #contact .contact-text {
   max-width: 350px;
