@@ -1,9 +1,27 @@
+@media (max-width: 1700px ){
+    .container .about .box {
+        padding: 0 100px;
+    }
+}
+
+@media (max-width: 1200px ){
+    .container .about .box {
+        padding: 0 60px;
+    }
+    .container .about .box-out h1 {
+        height: unset;
+    }
+}
+
 @media (max-width: 1000px ){
     .container .about .box {
         padding: 0 60px;
     }
+    .container .about .box-out h1 {
+        height: unset;
+    }
     .container .about .box .box-in {
-        font-size: 20px;
+        font-size: 25px;
         /* color: red; */
     }
     .container .project .leftct {
