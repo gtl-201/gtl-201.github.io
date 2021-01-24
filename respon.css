@@ -1,0 +1,18 @@
+@media (max-width: 1000px ){
+    .container .about .box {
+        padding: 0 60px;
+    }
+    .container .about .box .box-in {
+        font-size: 20px;
+        /* color: red; */
+    }
+    .container .project .leftct {
+        height: 50vh;
+    }
+    .container .project {
+        height: 50vh;
+    }
+    .container .project .leftct {
+        width: 45%;
+    }
+}

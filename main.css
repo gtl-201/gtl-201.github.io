@@ -21,11 +21,11 @@ a {
 }
 #gioithieu {
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
 }
 .container {
-  min-height: 100vh;
+  /* min-height: 100vh; */
   width: 100%;
   display: flex;
   align-items: center;
@@ -37,7 +37,7 @@ a {
 #header {
   position: absolute;
   z-index: 1000;
-  width: 100vw;
+  width: 100%;
   height: auto;
   width: 100%;
   height: auto;
@@ -397,8 +397,13 @@ a {
 /* Contact Info */
 #contact .contact {
   max-width: 1500px;
+  height: 100vh;
   text-align: center;
   align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #contact .contact-header h1 {
   font-size: 5rem;
