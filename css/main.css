@@ -20,7 +20,7 @@ a {
   text-decoration: none;
 }
 
-.scrollSnap {
+/* .scrollSnap {
   scroll-snap-type: Y mandatory;
   position: relative;
   max-height: 100vh;
@@ -28,7 +28,7 @@ a {
 }
 .scrollSnap .section {
   scroll-snap-align: start;
-}
+} */
 
 #gioithieu {
   width: 100%;
@@ -283,9 +283,9 @@ a {
   color: white;
   transition: 0.4s;
 }
-.container .about:hover .box-out {
+/* .container .about:hover .box-out {
   animation: slideUp 1s ease-in-out;
-}
+} */
 
 .container .about .box-out h1 {
   font-size: 50px;
@@ -349,9 +349,9 @@ a {
   position: absolute;
   right: 0px;
 }
-.container .project:hover .leftct {
+/* .container .project:hover .leftct {
   animation: slideright 1s ease-in-out;
-}
+} */
 .container .project .leftct h2 {
   margin-top: 10%;
   margin-bottom: 20px;
@@ -455,12 +455,12 @@ a {
 }
 
 #contact .contact-item {
-  display: inline-block;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 350px;
   max-width: 450px;
-  float: left;
+  /* float: left; */
   background-color: antiquewhite;
   margin: 10px;
   min-height: 170px;
@@ -649,8 +649,9 @@ a {
   }
 }
 @keyframes bounce { 
-  0%, 20%, 40%, 60%, 80%, 100% {transform: translateY(0);background-color: unset;}
-  50% {transform: translateY(-5px);background-color: #ff2079;}
+  0%, 20%, 40%, 60%, 80%, 100% {transform: translateY(0);background-color: unset;box-shadow: unset;}
+  50% {transform: translateY(-5px);background-color: #ff2079;  box-shadow: 0px 0px 5px #ff2079, 0px 0px 20px #ff2079, 0px 0px 50px #ff2079,
+    0px 0px 100px #ff2079, 0px 0px 150px #ff2079;}
 } 
 @keyframes bounce1 { 
   0%, 20%, 40%, 60%, 80%, 100% {transform: translateY(-5px);}
