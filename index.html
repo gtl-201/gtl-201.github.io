@@ -49,7 +49,8 @@
         <section id="gioithieu" class='section'>
             <div class="container">
                 <div class="head">
-                    <div class="img" name='img' id='img' onclick="audio()"><img src="img/2(2).png" alt=""></div>
+                    <div class="img" name='img' id='img' onclick="audio()"><span id='play'><i
+                                class="fa fa-play"></i></span><img src="img/2(2).png" alt=""></div>
                     <DIV>
                         <h1 style="font-size: 50px;margin-bottom: 20px;">Hello, I'am GTL_201<span></span>
                             <h1>
@@ -67,6 +68,15 @@
                                     My Git
                                 </a>
                     </DIV>
+
+                    <div class="circlelight c1" id='c1' onclick="turnlight('c1')"></div>
+                    <div class="circlelight c2" id='c2' onclick="turnlight('c2')"></div>
+                    <div class="lightbottom"></div>
+                    <div class="boxMusic" id='boxMusic'>
+                        <audio id='audio' controls>
+                            <source src="audio/Mood.mp3" type="audio/mpeg">
+                        </audio>
+                    </div>
                 </div>
             </div>
         </section>
@@ -80,19 +90,19 @@
         <!-- About Me -->
         <section class="container section">
             <div class="about">
-                <div class="box-out" data-aos="fade-up" data-aos-offset="250" data-aos-delay="100"
+                <div class="box-out" data-aos="fade-up" data-aos-offset="250" data-aos-delay="300"
                     data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true">
                     <!-- data-aos="fade-up" data-aos-offset="240" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
                     <h1>About me!</h1>
                     <div class='box'>
                         <div class="box-in">
-                            <h2></h2>My name is Nguyen Hoang Long. Currently, I am a web developer. I am a careful
+                            My name is Nguyen Hoang Long. Currently, I am a web developer. I am a careful
                             and hardworking person. I want to study and enjoy working with people. I adapt easily to
                             work
                             and the environment is proactive at work.
                         </div>
                         <div class="box-in">
-                            <h2></h2>I strongly believe that a great software engineer is a hybrid combination of
+                            I strongly believe that a great software engineer is a hybrid combination of
                             technical skills as well as soft skills, which are important in communicating with customers
                             and
                             colleagues to reach the best result for the business.I have learned how important is to
@@ -101,7 +111,7 @@
                             manageability.
                         </div>
                         <div class="box-in">
-                            <h2></h2>I like to work in groups rather than work individually, because when working
+                            I like to work in groups rather than work individually, because when working
                             by In groups, I can support people, or vice versa, if I have a problem, I can. Thanks for
                             everyone's help. That can improve the progress of the work up significantly.
                         </div>
@@ -118,7 +128,7 @@
 
         <section class="container section">
             <div class="project" id='pr1'>
-                <div class="leftct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="100"
+                <div class="leftct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="1000"
                     data-aos-easing="ease-in-out" data-aos-once="true">
                     <!-- data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
                     <h2>Sell Colothes Website</h2>
@@ -205,9 +215,7 @@
                         <h2>Your trust make my Brand</h2>
                     </div>
                 </div>
-                <audio id='audio'>
-                    <source src="audio/Mood.mp3" type="audio/mpeg">
-                </audio>
+
             </div>
 
         </section>
@@ -230,25 +238,42 @@
     //     }
     // });
 
-    var x = 0
+    var x = 0;
     function audio() {
         if (x != 0) {
             document.getElementById('audio').pause();
-            document.getElementById('img').style.backgroundColor="background-color: rgba(0, 0, 0, 0.377);";
-            document.getElementById('img').style.boxShadow= "unset";
-            document.getElementById('img').style.zIndex="unset";
+            document.getElementById('play').style.display = "unset";
+            document.getElementById('img').style.backgroundColor = "rgba(0, 0, 0, 0.377)";
+            document.getElementById('img').style.boxShadow = "unset";
+            document.getElementById('img').style.zIndex = "unset";
+            document.getElementById('boxMusic').style.bottom = "-8%";
+            document.getElementById('boxMusic').style.opacity = "0";
             document.getElementById('img').classList.remove("rotate");
-            x=0;
+            x = 0;
         } else {
             document.getElementById('audio').play();
-            document.getElementById('img').style.backgroundColor="rgba(255, 255, 255, 0.493)";
-            document.getElementById('img').style.boxShadow= "0px 0px 5px white, 0px 0px 20px white, 0px 0px 50px white,0px 0px 100px white, 0px 0px 150px white";
-            document.getElementById('img').style.zIndex="5000";
-            document.getElementById('img').style.rotate="5000";
+            document.getElementById('play').style.display = "none";
+            document.getElementById('img').style.backgroundColor = "rgba(255, 255, 255, 0.493)";
+            document.getElementById('img').style.boxShadow = "0px 0px 5px white, 0px 0px 20px white, 0px 0px 50px white,0px 0px 100px white, 0px 0px 150px white";
+            document.getElementById('img').style.zIndex = "5000";
+            document.getElementById('img').style.rotate = "5000";
+            document.getElementById('boxMusic').style.bottom = "5%";
+            document.getElementById('boxMusic').style.opacity = "1";
             document.getElementById('img').classList.add("rotate");
             x = 1;
         }
-
     }
+
+    var y=0;
+    function turnlight(z){
+        if (y == 0) {
+            document.getElementById(z).style.opacity="1";
+            y = 1;
+        } else {
+            document.getElementById(z).style.opacity="0"
+            y = 0;
+        }
+    }
+    // audio();
 
 </script>

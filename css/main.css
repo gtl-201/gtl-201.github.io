@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 * {
   padding: 0;
@@ -147,6 +150,73 @@ a {
   height: 400px;
 }
 
+.head .img {
+  position: relative;
+}
+.head .img span {
+  color: rgba(255, 255, 255, 0.199);
+  z-index: 6000;
+  font-size: 100px;
+  position: absolute;
+  top: 35%;
+  left: 43%;
+  transition: 0.3s ease-in-out;
+}
+.head .img:hover span {
+  transform: scale(1.2);
+  background: -webkit-linear-gradient(
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.boxMusic {
+  position: absolute;
+  bottom: -8%;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 0px 20px white;
+  transition: 1.3s linear;
+  /* opacity: 0; */
+}
+.lightbottom {
+  width: 100%;
+  position: absolute;
+  bottom: -11px;
+  height: 10px;
+  box-shadow: 0px 0px 5px rgb(255, 198, 198), 0px 0px 20px rgb(247, 178, 178),
+    0px 0px 50px rgb(255, 180, 180), 0px 0px 70px rgb(255, 154, 154);
+}
+.circlelight {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 5px rgb(255, 198, 198), 0px 0px 20px rgb(247, 178, 178),
+    0px 0px 50px rgb(255, 180, 180), 0px 0px 70px rgb(255, 154, 154);
+  background-color: rgb(255, 198, 198);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+  z-index: 4000;
+}
+.c1 {
+  bottom: -100px;
+  left: -100px;
+}
+.c2 {
+  bottom: -100px;
+  right: -100px;
+}
+
+/* #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 */
+
 /* gioithieu section reveal animation */
 #gioithieu h1 span {
   position: absolute;
@@ -266,21 +336,23 @@ a {
   display: flex;
   width: 100%;
   height: 100vh;
-  background: url("../img/girl-hunting-down-bq.jpg") top right no-repeat;
+  background: url("../img/coffee-and-computer.jpg") rgba(0, 0, 0, 0.356) top
+    right no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  background-blend-mode: multiply;
   position: relative;
 }
 .container .about .box-out {
   position: absolute;
   bottom: 0px;
   width: 100%;
-  height: 50vh;
+  /* height: 50vh; */
   display: flex;
   /* justify-content: center; */
   align-items: center;
   flex-direction: column;
-  border-top: 13px rgba(255, 0, 0, 0.829) solid;
+  border-top: 5px rgba(255, 0, 0, 0.829) solid;
   background-color: rgba(23, 24, 32, 0.95);
   color: white;
   transition: 0.4s;
@@ -290,34 +362,44 @@ a {
 } */
 
 .container .about .box-out h1 {
-  font-size: 50px;
+  font-size: 40px;
   /* text-transform: uppercase; */
   letter-spacing: 5px;
-  color: rgba(255, 0, 0, 0.959);
+  color: white;
   width: 100%;
   text-align: center;
-  padding: 30px 0;
-  height: 10vh;
-  /* animation: bounce2 2.7s infinite; */
+  padding: 70px 0;
+  /* height: 10vh;  */
+  font-family: "Press Start 2P", cursive;
+
+  animation: changeColor 2.7s linear infinite;
 }
 .container .about .box {
   width: 100%;
-  height: 40vh;
+  /* height: 40vh; */
   display: flex;
   justify-content: space-between;
   padding: 0 300px;
+  padding-bottom: 140px;
 }
 .container .about .box .box-in h2 {
   padding: 15px 0 5px 0;
 }
 .container .about .box .box-in {
   width: 30%;
-  color: rgba(255, 255, 255, 0.774);
+  color: #808080;
   /* text-align: center; */
-  font-size: 18px;
+  font-size: 19px;
   /* padding-left: 300px; */
   font-weight: 200;
-  line-height: 1.4;
+  line-height: 1.6;
+  font-family: "Abel", sans-serif;
+  transition: 0.1s linear;
+}
+.container .about .box .box-in:hover {
+  color: #fdecec;
+  transform: scale(1.2);
+  font-weight: 500;
 }
 .container .about .arrow {
   position: absolute;
@@ -341,7 +423,7 @@ a {
 }
 .container .project .leftct {
   height: 100vh;
-  width: 30%;
+  width: 27%;
   background-color: rgba(23, 24, 32, 0.95);
   color: rgba(255, 255, 255, 0.75);
   display: flex;
@@ -396,7 +478,7 @@ a {
 }
 .container .project .leftct .button {
   display: flex;
-  width: 65%;
+  width: 85%;
   justify-content: space-between;
 }
 .container .project .leftct .button a {
@@ -409,7 +491,6 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 .container .project .leftct .button a:nth-child(1) {
   animation: bounce 1.5s ease-out infinite;
@@ -650,22 +731,70 @@ a {
     right: 0px;
   }
 }
-@keyframes bounce { 
-  0%, 20%, 40%, 60%, 80%, 100% {transform: translateY(0);background-color: unset;box-shadow: unset;}
-  50% {transform: translateY(-5px);background-color: #ff2079;  box-shadow: 0px 0px 5px #ff2079, 0px 0px 20px #ff2079, 0px 0px 50px #ff2079,
-    0px 0px 100px #ff2079, 0px 0px 150px #ff2079;}
-} 
-@keyframes bounce1 { 
-  0%, 20%, 40%, 60%, 80%, 100% {transform: translateY(-5px);}
-  50% {transform: translateY(0px);}
-} 
-@keyframes bounce2 { 
-  0%, 20%, 40%, 60%, 80%, 100% {transform: translateY(0);font-size: 50px;}
-  50% {transform: translateY(-5px);font-size: 70px;}
-} 
+@keyframes bounce {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: translateY(0);
+    background-color: unset;
+    box-shadow: unset;
+  }
+  50% {
+    transform: translateY(-5px);
+    background-color: #ff2079;
+    box-shadow: 0px 0px 5px #ff2079, 0px 0px 20px #ff2079, 0px 0px 50px #ff2079,
+      0px 0px 100px #ff2079, 0px 0px 150px #ff2079;
+  }
+}
+@keyframes bounce1 {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}
+@keyframes bounce2 {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    transform: translateY(0);
+    font-size: 50px;
+  }
+  50% {
+    transform: translateY(-5px);
+    font-size: 70px;
+  }
+}
 @keyframes spin {
-  from {transform:rotate(0deg);}
-  to {transform:rotate(360deg);}
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes changeColor {
+  0% {
+    color: #69b7eb;
+  }
+  50% {
+    color: #b3dbd3;
+  }
+  100% {
+    color: #f4d6db;
+  }
 }
 
 /* end same - button */
