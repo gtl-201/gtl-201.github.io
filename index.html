@@ -69,6 +69,7 @@
                                 </a>
                     </DIV>
 
+                    <div class="switch" onclick="switchLight()"><img src="img/switch.png" alt=""></div>
                     <div class="circlelight c1" id='c1' onclick="turnlight('c1')"></div>
                     <div class="circlelight c2" id='c2' onclick="turnlight('c2')"></div>
                     <div class="lightbottom"></div>
@@ -91,18 +92,18 @@
         <!-- About Me -->
         <section class="container section">
             <div class="about">
-                <div class="box-out" data-aos="fade-up" data-aos-offset="250" data-aos-delay="300"
+                <div class="box-out" id='box-out' data-aos="fade-up" data-aos-offset="250" data-aos-delay="300"
                     data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true">
                     <!-- data-aos="fade-up" data-aos-offset="240" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
                     <h1>About me!</h1>
                     <div class='box'>
-                        <div class="box-in">
+                        <div class="box-in" id='box-in'>
                             My name is Nguyen Hoang Long. Currently, I am a web developer. I am a careful
                             and hardworking person. I want to study and enjoy working with people. I adapt easily to
                             work
                             and the environment is proactive at work.
                         </div>
-                        <div class="box-in">
+                        <div class="box-in" id='box-in'>
                             I strongly believe that a great software engineer is a hybrid combination of
                             technical skills as well as soft skills, which are important in communicating with customers
                             and
@@ -111,7 +112,7 @@
                             the functionality while boosting the performance, reliability, flexibility, and
                             manageability.
                         </div>
-                        <div class="box-in">
+                        <div class="box-in" id='box-in'>
                             I like to work in groups rather than work individually, because when working
                             by In groups, I can support people, or vice versa, if I have a problem, I can. Thanks for
                             everyone's help. That can improve the progress of the work up significantly.
@@ -219,6 +220,10 @@
 
             </div>
 
+            <audio id='click' hidden>
+                <source src="audio/mouse-click-clicking-single-click-3-www.FesliyanStudios.com.mp3" type="audio/mpeg">
+            </audio>
+
         </section>
 
         <!--- End Contact Info -->
@@ -257,7 +262,7 @@
             document.getElementById('img').style.backgroundColor = "rgba(255, 255, 255, 0.493)";
             document.getElementById('img').style.boxShadow = "0px 0px 5px white, 0px 0px 20px white, 0px 0px 50px white,0px 0px 100px white, 0px 0px 150px white";
             document.getElementById('img').style.zIndex = "5000";
-            document.getElementById('img').style.rotate = "5000";
+            // document.getElementById('img').style.rotate = "5000";
             document.getElementById('boxMusic').style.bottom = "5%";
             document.getElementById('boxMusic').style.opacity = "1";
             document.getElementById('img').classList.add("rotate");
@@ -267,13 +272,34 @@
 
     var y = 0;
     function turnlight(z) {
-        if (y == 0) {
-            document.getElementById(z).style.opacity = "1";
-            y = 1;
+        if (document.getElementById(z).style.opacity == "1") {
+            document.getElementById(z).style.opacity = "0";
         } else {
-            document.getElementById(z).style.opacity = "0"
-            y = 0;
+            document.getElementById(z).style.opacity = "1";
         }
+        if (document.getElementById('c1').style.opacity == "1" && document.getElementById('c2').style.opacity == "1") {
+            document.getElementById('gioithieu').style.backgroundColor = "rgba(255, 172, 172, 0.356)";
+        } else {
+            document.getElementById('gioithieu').style.backgroundColor = "rgba(37, 35, 35, 0.24)";
+        }
+    }
+
+    function switchLight() {
+        document.getElementById('click').play();
+        if (document.getElementById('c1').style.opacity == "1" | document.getElementById('c2').style.opacity == "1") {
+            document.getElementById('c1').style.opacity = "0";
+            document.getElementById('c2').style.opacity = "0";
+        } else {
+            document.getElementById('c1').style.opacity = "1";
+            document.getElementById('c2').style.opacity = "1";
+        }
+
+        if (document.getElementById('c1').style.opacity == "1" && document.getElementById('c2').style.opacity == "1") {
+            document.getElementById('gioithieu').style.backgroundColor = "rgba(255, 172, 172, 0.356)";
+        } else {
+            document.getElementById('gioithieu').style.backgroundColor = "rgba(37, 35, 35, 0.24)";
+        }
+
     }
     // audio();
 

@@ -98,13 +98,14 @@ a {
 #gioithieu {
   position: relative;
   /* background-position: top center; */
-  background: url("../gif/gif1.gif") top right no-repeat;
+  background: url("../gif/gif1.gif") top center no-repeat;
   background-size: cover;
   background-blend-mode: multiply;
   background-color: rgba(37, 35, 35, 0.24);
   background-attachment: fixed;
   /* background-position: top center; */
 }
+
 #gioithieu h1 {
   display: block;
   width: fit-content;
@@ -174,6 +175,11 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.switch img{
+  height: 200px;
+  /* position: absolute; */
+  z-index: 6000;
+}
 
 .boxMusic {
   position: absolute;
@@ -189,7 +195,8 @@ a {
 .lightbottom {
   width: 100%;
   position: absolute;
-  bottom: -11px;
+  /* z-index: 6000; */
+  bottom: -10px;
   height: 10px;
   box-shadow: 0px 0px 5px rgb(255, 198, 198), 0px 0px 20px rgb(247, 178, 178),
     0px 0px 50px rgb(255, 180, 180), 0px 0px 70px rgb(255, 154, 154);
@@ -204,7 +211,7 @@ a {
   background-color: rgb(255, 198, 198);
   opacity: 0;
   transition: 0.3s ease-in-out;
-  z-index: 4000;
+  /* z-index: 4000; */
 }
 .c1 {
   bottom: -100px;
@@ -342,7 +349,7 @@ a {
   width: 100%;
   height: 100vh;
   background: url("../img/coffee-and-computer.jpg") rgba(0, 0, 0, 0.356) top
-    right no-repeat;
+    center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: multiply;
