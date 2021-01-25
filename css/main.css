@@ -130,6 +130,7 @@ a {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.377);
   transition: 0.5s ease-in-out;
+  /* animation: spin 5s linear infinite; */
 }
 #gioithieu .container .img:hover {
   /* transform:scale(1.7) translateX(34%); */
@@ -138,6 +139,7 @@ a {
     0px 0px 100px white, 0px 0px 150px white;
 
   z-index: 5000;
+  /* animation: spin 5s linear infinite; */
   /* box-shadow: 0 0 5px white, 0 0 10px white, 0 0 20px white, 0 0 50px white,
     0 0 100px rgba(255, 255, 255, 0.603), 0 0 100px white; */
 }
@@ -296,7 +298,7 @@ a {
   text-align: center;
   padding: 30px 0;
   height: 10vh;
-  animation: bounce2 2.7s infinite;
+  /* animation: bounce2 2.7s infinite; */
 }
 .container .about .box {
   width: 100%;
@@ -661,6 +663,11 @@ a {
   0%, 20%, 40%, 60%, 80%, 100% {transform: translateY(0);font-size: 50px;}
   50% {transform: translateY(-5px);font-size: 70px;}
 } 
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
 /* end same - button */
 
 /*  END Keyframes */

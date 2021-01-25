@@ -13,11 +13,11 @@
     <script src="js/jqr.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/aos.js"></script>
-    <!-- <style>
-        .remove {
-            animation: slideUp 5s ease-in-out;
+    <style>
+        .rotate {
+            animation: spin 5s linear infinite;
         }
-    </style> -->
+    </style>
 </head>
 
 <body>
@@ -49,7 +49,7 @@
         <section id="gioithieu" class='section'>
             <div class="container">
                 <div class="head">
-                    <div class="img"><img src="img/2(2).png" alt=""></div>
+                    <div class="img" name='img' id='img' onclick="audio()"><img src="img/2(2).png" alt=""></div>
                     <DIV>
                         <h1 style="font-size: 50px;margin-bottom: 20px;">Hello, I'am GTL_201<span></span>
                             <h1>
@@ -80,7 +80,8 @@
         <!-- About Me -->
         <section class="container section">
             <div class="about">
-                <div class="box-out" data-aos="fade-up" data-aos-offset="250" data-aos-delay="100" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true">
+                <div class="box-out" data-aos="fade-up" data-aos-offset="250" data-aos-delay="100"
+                    data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true">
                     <!-- data-aos="fade-up" data-aos-offset="240" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
                     <h1>About me!</h1>
                     <div class='box'>
@@ -117,7 +118,8 @@
 
         <section class="container section">
             <div class="project" id='pr1'>
-                <div class="leftct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="100" data-aos-easing="ease-in-out" data-aos-once="true">
+                <div class="leftct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="100"
+                    data-aos-easing="ease-in-out" data-aos-once="true">
                     <!-- data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
                     <h2>Sell Colothes Website</h2>
                     <h3>Solo project</h3>
@@ -203,12 +205,16 @@
                         <h2>Your trust make my Brand</h2>
                     </div>
                 </div>
+                <audio id='audio'>
+                    <source src="audio/Mood.mp3" type="audio/mpeg">
+                </audio>
             </div>
 
         </section>
 
         <!--- End Contact Info -->
     </div>
+
 </body>
 
 </html>
@@ -223,4 +229,26 @@
     //         document.getElementById('box-out').removeClass("remove");
     //     }
     // });
+
+    var x = 0
+    function audio() {
+        if (x != 0) {
+            document.getElementById('audio').pause();
+            document.getElementById('img').style.backgroundColor="background-color: rgba(0, 0, 0, 0.377);";
+            document.getElementById('img').style.boxShadow= "unset";
+            document.getElementById('img').style.zIndex="unset";
+            document.getElementById('img').classList.remove("rotate");
+            x=0;
+        } else {
+            document.getElementById('audio').play();
+            document.getElementById('img').style.backgroundColor="rgba(255, 255, 255, 0.493)";
+            document.getElementById('img').style.boxShadow= "0px 0px 5px white, 0px 0px 20px white, 0px 0px 50px white,0px 0px 100px white, 0px 0px 150px white";
+            document.getElementById('img').style.zIndex="5000";
+            document.getElementById('img').style.rotate="5000";
+            document.getElementById('img').classList.add("rotate");
+            x = 1;
+        }
+
+    }
+
 </script>
