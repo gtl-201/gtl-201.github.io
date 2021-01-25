@@ -175,7 +175,7 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.switch img{
+.switch img {
   height: 200px;
   position: absolute;
   z-index: 6000;
@@ -183,6 +183,9 @@ a {
   bottom: 20%;
 }
 
+.boxMusic audio {
+  width: 340px;
+}
 .boxMusic {
   position: absolute;
   bottom: -8%;
@@ -191,7 +194,7 @@ a {
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
   box-shadow: 0 0px 20px white;
-  transition: 1.3s linear;
+  transition: 0.4s linear;
   /* opacity: 0; */
 }
 .lightbottom {
@@ -204,29 +207,36 @@ a {
     0px 0px 50px rgb(255, 180, 180), 0px 0px 70px rgb(255, 154, 154);
 }
 .circlelight {
-  position: absolute;
+  transition: 0.3s ease-in-out;
+  z-index: 500;
+}
+.circlelight img {
   width: 200px;
-  height: 200px;
+}
+.ab{
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: -10px;
+}
+.ab .lampl1,.ab .lampl2{
+  bottom: 100px;
+  margin: 0 50px 80px 50px;
+}
+.lampl1,.lampl2 {
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
+  z-index: 200;
   box-shadow: 0px 0px 5px rgb(255, 198, 198), 0px 0px 20px rgb(247, 178, 178),
     0px 0px 50px rgb(255, 180, 180), 0px 0px 70px rgb(255, 154, 154);
+  box-shadow: inset 0px 0px 5px rgb(255, 198, 198),
+    0px 0px 20px rgb(247, 178, 178), 0px 0px 50px rgb(255, 180, 180),
+    0px 0px 100px rgb(255, 154, 154);
   background-color: rgb(255, 198, 198);
   opacity: 0;
-  transition: 0.3s ease-in-out;
-  /* z-index: 4000; */
-}
-.c1 {
-  bottom: -100px;
-  left: -100px;
-}
-.c2 {
-  width: 100px;
-  height: 200px; /* as the half of the width */
-  border-radius:unset ;
-  border-top-left-radius: 110px; /* 100px of height + 10px of border */
-  border-bottom-left-radius: 110px;
-  bottom: -100px;
-  right: 0px;
 }
 
 /* #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 */

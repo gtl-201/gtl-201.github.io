@@ -68,16 +68,34 @@
                                     My Git
                                 </a>
                     </DIV>
-
                     <div class="switch" onclick="switchLight()"><img src="img/switch.png" alt=""></div>
-                    <div class="circlelight c1" id='c1' onclick="turnlight('c1')"></div>
-                    <div class="circlelight c2" id='c2' onclick="turnlight('c2')"></div>
+                    <div class="ab">
+
+                        <div class="circlelight c1" onclick="turnlight('c1')"> <img src="img/table-lamp.png" alt="">
+                        </div>
+                        <div class="circlelight c2" onclick="turnlight('c2')"> <img src="img/table-lamp.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="ab">
+                        <div class='lampl1' id='c1'></div>
+                        <div class='lampl2' id='c2'></div>
+                    </div>
+
                     <div class="lightbottom"></div>
                     <div class="boxMusic" id='boxMusic'>
-                        <audio id='audio' controls>
-                            <source src="audio/Mood.mp3" type="audio/mpeg">
-                            <!-- <source src="audio/haiKery.mp3" type="audio/mpeg"> -->
-                        </audio>
+
+
+                        <figure id="control_bar">
+                            <!-- <figcaption>Listen to "Cháy mẹ xe":</figcaption> -->
+                            <!-- <br> -->
+                            <audio id='audio' controls>
+                                <source src="audio/Mood.mp3" type="audio/mpeg">
+                                <!-- <source src="audio/haiKery.mp3" type="audio/mpeg"> -->
+                            </audio>
+                        </figure>
+
+
                     </div>
                 </div>
             </div>
@@ -118,7 +136,8 @@
                             everyone's help. That can improve the progress of the work up significantly.
                         </div>
                     </div>
-                    <i class="fa fa-angle-down arrow">🐉</i>
+                    <img src="img/game-console.png" style="height: 70px;" alt="" class='arrow'>
+                    <!-- <i class="fa fa-angle-down arrow"></i> -->
                 </div>
 
             </div>
@@ -304,3 +323,64 @@
     // audio();
 
 </script>
+
+
+<!-- <script>
+    var rota = null;
+    flag = true
+    i = 0
+    audio = document.getElementById('audio');
+    match = null;
+    document.onclick = () => {
+        var bar = document.getElementById('control_bar');
+        if (flag == true) {
+            if (i < 1) {
+                context = new AudioContext()
+                match = context.createAnalyser()
+                context.createMediaElementSource(audio).connect(match)
+                match.connect(context.destination)
+                i = 100
+            }
+            bar.style.opacity = '1';
+            bar.style.bottom = '100px';
+            audio.play()
+            loop()
+            flag = false
+            rota = setInterval(rotator, 70);
+        } else {
+            clearInterval(rota);
+            audio.pause()
+            bar.style.opacity = '0';
+            bar.style.bottom = '-100px';
+            flag = true
+        }
+    }
+    function loop() {
+        window.requestAnimationFrame(loop)
+
+        fbc = new Uint8Array(match.frequencyBinCount);
+        match.getByteFrequencyData(fbc)
+        avg = fbc.reduce((a, b) => a + b, 0) / fbc.length
+
+        document.body.style.backgroundColor = "rgb(" + (2 * avg) + "," + (avg) + "," + (avg * 1.2) + ")"
+        document.getElementById('img').style.width = avg * 5 + "px";
+        document.getElementById('img').style.height = avg * 5 + "px";
+
+
+    }
+
+    var deg = 0;
+    function rotator() {
+        console.log(3)
+
+        var div = document.getElementById("img");
+        deg = deg + 1;
+
+
+        div.style.webkitTransform = "rotate(" + deg + "deg)";
+        div.style.mozTransform = "rotate(" + deg + "deg)";
+        div.style.msTransform = "rotate(" + deg + "deg)";
+        div.style.oTransform = "rotate(" + deg + "deg)";
+        div.style.transform = "rotate(" + deg + "deg)";
+    }
+</script> -->
