@@ -211,8 +211,13 @@ a {
   left: -100px;
 }
 .c2 {
+  width: 100px;
+  height: 200px; /* as the half of the width */
+  border-radius:unset ;
+  border-top-left-radius: 110px; /* 100px of height + 10px of border */
+  border-bottom-left-radius: 110px;
   bottom: -100px;
-  right: -100px;
+  right: 0px;
 }
 
 /* #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 */
