@@ -177,8 +177,10 @@ a {
 }
 .switch img{
   height: 200px;
-  /* position: absolute; */
+  position: absolute;
   z-index: 6000;
+  right: 10%;
+  bottom: 20%;
 }
 
 .boxMusic {
