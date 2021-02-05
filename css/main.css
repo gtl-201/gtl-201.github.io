@@ -441,7 +441,12 @@ a {
   height: 100vh;
 }
 #pr1 {
-  background: url("../img/bg.jpg");
+  background: url("../img/bg.jpg");`
+  background-size: cover;
+  background-attachment: fixed;
+}
+#pr2 {
+  background: url("../img/pr2.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
