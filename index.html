@@ -46,12 +46,26 @@
         <!-- End Header -->
 
         <!-- gioithieu Section -->
-        <section id="gioithieu" class='section'>
+        <section id="gioithieu" class='section' >
             <div class="container">
                 <div class="head">
-                    <div class="img" name='img' id='img' onclick="audio()"><span id='play'><i
-                                class="fa fa-play"></i></span><img src="img/2(2).png" alt=""></div>
-                    <DIV>
+
+                    <div class="boxMusic" id='boxMusic'>
+                        <figure id="control_bar">
+                            <audio id='audio' loop controls >
+                                <source src="audio/daithien.mp3" type="audio/mpeg">
+                            </audio>
+                        </figure>
+                    </div>
+
+                    <video muted loop id="myVideo" onclick="audio()">
+                        <source src="audio/y2mate.com - スパークル original ver Your name Music Video edition 予告編 from new album人間開花初回盤DVD_1080p.mp4" type="video/mp4">
+                    </video>
+
+                    <div class="img" name='img' id='img' onclick="audio()"><span id='play'>
+                            <i class="fa fa-play"></i></span><img src="img/2(2).png" alt="">
+                    </div>
+                    <DIV class='zIn'>
                         <h1 style="font-size: 50px;margin-bottom: 20px;">Hello, I'am GTL_201<span></span>
                             <h1>
                                 <!-- <h1> <span></span></h1> -->
@@ -70,7 +84,6 @@
                     </DIV>
                     <div class="switch" onclick="switchLight()"><img src="img/switch.png" alt=""></div>
                     <div class="ab">
-
                         <div class="circlelight c1" onclick="turnlight('c1')"> <img src="img/table-lamp.png" alt="">
                         </div>
                         <div class="circlelight c2" onclick="turnlight('c2')"> <img src="img/table-lamp.png" alt="">
@@ -83,20 +96,6 @@
                     </div>
 
                     <div class="lightbottom"></div>
-                    <div class="boxMusic" id='boxMusic'>
-
-
-                        <figure id="control_bar">
-                            <!-- <figcaption>Listen to "Cháy mẹ xe":</figcaption> -->
-                            <!-- <br> -->
-                            <audio id='audio' controls>
-                                <source src="audio/Mood.mp3" type="audio/mpeg">
-                                <!-- <source src="audio/haiKery.mp3" type="audio/mpeg"> -->
-                            </audio>
-                        </figure>
-
-
-                    </div>
                 </div>
             </div>
         </section>
@@ -223,8 +222,6 @@
 
 
 
-
-
         <!--- Contact Info -->
 
         <section id="contact" class="container section">
@@ -288,37 +285,39 @@
 
 <script>
     AOS.init();
-    // $(window).scroll(function () {
-    //     if ($(window).scrollTop() > 0) {
-    //         document.getElementById('box-out').addClass("remove");
-    //     }
-    //     else {
-    //         document.getElementById('box-out').removeClass("remove");
-    //     }
-    // });
-
     var x = 0;
     function audio() {
         if (x != 0) {
             document.getElementById('audio').pause();
+            document.getElementById('myVideo').style.zIndex = "-10";
+            document.getElementById('myVideo').pause();
             document.getElementById('play').style.display = "unset";
             document.getElementById('img').style.backgroundColor = "rgba(0, 0, 0, 0.377)";
             document.getElementById('img').style.boxShadow = "unset";
             document.getElementById('img').style.zIndex = "unset";
+            document.getElementById('img').style.marginRight = "30px";
             document.getElementById('boxMusic').style.bottom = "-8%";
             document.getElementById('boxMusic').style.opacity = "0";
             document.getElementById('img').classList.remove("rotate");
+            // document.getElementById('gioithieu').style.background = "url('../gif/gif1.gif') top center no-repeat";
+            // document.getElementById('gioithieu').style.backgroundSize = "cover";
+            // document.getElementById('gioithieu').style.backgroundAttachment = "fixed";
             x = 0;
         } else {
             document.getElementById('audio').play();
+            document.getElementById('myVideo').style.zIndex = "10000";
+            document.getElementById('myVideo').play();
             document.getElementById('play').style.display = "none";
             document.getElementById('img').style.backgroundColor = "rgba(255, 255, 255, 0.493)";
             document.getElementById('img').style.boxShadow = "0px 0px 5px white, 0px 0px 20px white, 0px 0px 50px white,0px 0px 100px white, 0px 0px 150px white";
-            document.getElementById('img').style.zIndex = "5000";
-            // document.getElementById('img').style.rotate = "5000";
+            document.getElementById('img').style.zIndex = "11000";
+            document.getElementById('img').style.marginRight = "-450px";
             document.getElementById('boxMusic').style.bottom = "5%";
             document.getElementById('boxMusic').style.opacity = "1";
             document.getElementById('img').classList.add("rotate");
+            // document.getElementById('gioithieu').style.background = "url('../gif/1565845276_1_be6fbcb2c4f7d05ec80cb6532b05cbda.jpg') center center no-repeat";
+            // document.getElementById('gioithieu').style.backgroundSize = "cover";
+            // document.getElementById('gioithieu').style.backgroundAttachment = "fixed";
             x = 1;
         }
     }
@@ -354,8 +353,14 @@
         }
 
     }
-    // audio();
+    
 
+
+
+
+
+
+    // audio();
 </script>
 
 
