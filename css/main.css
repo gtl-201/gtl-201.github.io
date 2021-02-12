@@ -11,6 +11,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+audio:focus {
+  outline: none;
+}
 ul li {
   list-style-type: none;
   font-style: italic;
@@ -444,14 +447,12 @@ a {
   height: 100vh;
 }
 #pr1 {
-  background: url("../img/bg.jpg") center
-  center no-repeat;
+  background: url("../img/bg.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 #pr2 {
-  background: url("../img/pr2.jpg") center
-  center no-repeat;;
+  background: url("../img/pr2.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -576,7 +577,7 @@ a {
 /* End-Project */
 
 /* Contact Info */
-#contact{
+#contact {
   background-color: white;
 }
 #contact .contact {
@@ -588,7 +589,6 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
 }
 #contact .contact-header h1 {
   font-size: 5rem;
