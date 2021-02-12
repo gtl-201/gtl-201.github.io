@@ -3,7 +3,8 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
+    
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <title></title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -59,20 +60,20 @@
                     </div>
 
                     <video muted loop id="myVideo" onclick="audio()">
-                        <source src="audio/y2mate.com - スパークル original ver Your name Music Video edition 予告編 from new album人間開花初回盤DVD_1080p.mp4" type="video/mp4">
+                        <source src="audio/China_1080p.mp4" type="video/mp4">
                     </video>
 
                     <div class="img" name='img' id='img' onclick="audio()"><span id='play'>
-                            <i class="fa fa-play"></i></span><img src="img/2(2).png" alt="">
+                            <i class="fa fa-play"></i></span><img id='imgin' src="img/2(2).png" alt="">
                     </div>
                     <DIV class='zIn'>
-                        <h1 style="font-size: 50px;margin-bottom: 20px;">Hello, I'am GTL_201<span></span>
+                        <h1 style="font-size: 40px;margin-bottom: 20px;">Hello, I'am GTL_201<span></span>
                             <h1>
                                 <!-- <h1> <span></span></h1> -->
-                                <h1 style="font-size: 25px;margin-bottom: 10px;"><i>Nguyen Hoang Long </i> <span></span>
+                                <h1 style="font-size: 20px;margin-bottom: 10px;"><i>Nguyen Hoang Long </i> <span></span>
                                 </h1>
 
-                                <a style="font-size:30px;font-weight: 600;padding: 6px 15px;"
+                                <a style="font-size:25px;font-weight: 600;padding: 6px 15px;"
                                     href="https://github.com/gtl-201" target="_blank" class="cta">
                                     <span></span>
                                     <span></span>
@@ -295,6 +296,9 @@
             document.getElementById('img').style.backgroundColor = "rgba(0, 0, 0, 0.377)";
             document.getElementById('img').style.boxShadow = "unset";
             document.getElementById('img').style.zIndex = "unset";
+            document.getElementById('img').style.height = "360px";
+            document.getElementById('img').style.width = "360px";            
+            document.getElementById('imgin').style.height = "360px";
             document.getElementById('img').style.marginRight = "30px";
             document.getElementById('boxMusic').style.bottom = "-8%";
             document.getElementById('boxMusic').style.opacity = "0";
@@ -311,7 +315,10 @@
             document.getElementById('img').style.backgroundColor = "rgba(255, 255, 255, 0.493)";
             document.getElementById('img').style.boxShadow = "0px 0px 5px white, 0px 0px 20px white, 0px 0px 50px white,0px 0px 100px white, 0px 0px 150px white";
             document.getElementById('img').style.zIndex = "11000";
-            document.getElementById('img').style.marginRight = "-450px";
+            document.getElementById('img').style.height = "400px";
+            document.getElementById('img').style.width = "400px";           
+             document.getElementById('imgin').style.height = "400px";
+            document.getElementById('img').style.marginRight = "-400px";
             document.getElementById('boxMusic').style.bottom = "5%";
             document.getElementById('boxMusic').style.opacity = "1";
             document.getElementById('img').classList.add("rotate");
