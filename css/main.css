@@ -40,7 +40,7 @@ a {
   width: 100%;
   min-height: 100vh;
   display: flex;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .container {
@@ -74,6 +74,7 @@ a {
   justify-content: space-between;
 }
 
+.brand .a,
 .brand a {
   font-size: 3.5rem;
   color: white;
@@ -83,16 +84,18 @@ a {
   color: red;
 }
 
-.list a {
+.list a,
+.list .a {
   font-size: 2rem;
   color: white;
   letter-spacing: 2px;
 }
-.list a span {
+.list a span .list .a span {
   color: gray;
   padding: 0 5px;
 }
-.list a:hover {
+.list a:hover,
+.list .a:hover {
   color: red;
 }
 
@@ -289,6 +292,13 @@ a {
   animation-delay: 2.5s;
 }
 
+#gioithieu .bgGif{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  /* background-color: #39c088; */
+}
+
 /* Button See More */
 #gioithieu a {
   position: relative;
@@ -431,13 +441,6 @@ a {
   color: #fdecec;
   transform: scale(1.2);
   font-weight: 500;
-}
-.container .about .arrow {
-  position: absolute;
-  bottom: 12px;
-  font-size: 40px;
-  font-weight: 100;
-  animation: bounce1 2s infinite;
 }
 /* End about me */
 
@@ -694,10 +697,59 @@ a {
   top: 0px;
   min-width: 100vw;
   min-height: 100vh;
+  /* max-height: 100vh; */
   z-index: -10;
 }
 
 /* End Contact Info */
+
+/* Global Arrow */
+.arrow {
+  position: absolute;
+  bottom: 12px;
+  height: 70px;
+  transition: 0.2s;
+}
+.leftct .arrowTop {
+  right: 20px;
+  bottom: 60px;
+  animation: bounce2 2s infinite;
+}
+.arrowBot {
+  animation: bounce1 2s infinite;
+}
+
+.arrowBot:hover {
+  /* height: 75px; */
+  /* animation: unset; */
+  bottom: 3px;
+}
+.arrowTop:hover {
+  /* animation: unset; */
+  bottom: 74px;
+}
+.leftct #arrowPDown {
+  right: 20px;
+}
+
+.rightct .arrowTop {
+  left: 20px;
+  bottom: 60px;
+  animation: bounce2 2s infinite;
+}
+.rightct #arrowPDown {
+  left: 20px;
+}
+.arrscrt{
+  right: 46%;
+  bottom: 20px;
+  transition: 0.2s;
+  animation: bounce2 2s infinite;
+}
+.arrscrt:hover{
+  bottom: 37px;
+}
+/*End Global Arrow */
 
 /* Keyframes */
 @keyframes animation-lef-to-right {

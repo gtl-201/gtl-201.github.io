@@ -33,7 +33,8 @@
                         <a href="#"><span>G</span>T<span>L</span>(Gogeous<span>Life</span>)</a>
                     </div>
                     <div class="list">
-                        <a href="#">Project <span>|</span> </a>
+                        <span class='a' onclick="scrv('allProject')">Project <span>|</span> </span>
+                        <span class='a' onclick="scrv('about')">About <span>|</span> </span>
                         <a href="https://www.facebook.com/nguyenhoanglong.1212001/"><i
                                 class="fa fa-facebook-square"></i>
                             <span>-</span> </a>
@@ -47,22 +48,32 @@
         </div>
         <!-- End Header -->
 
+
+
         <!-- gioithieu Section -->
         <section id="gioithieu" class='section'>
             <div class="container">
                 <div class="head">
 
                     <div class="boxMusic" id='boxMusic'>
-                        <figure id="control_bar">
+
+                        <figure id="control_bar" value='Tri Boss'>
+                            <figcaption
+                                style="font-size: 25px;letter-spacing: 3px;position:absolute;top: -35px;left: 20%;color: #ff781f;font-weight: 600;">
+                                Tri Bass Play</figcaption>
                             <audio id='audio' loop controls>
-                                <source src="audio/Tình Bạn Diệu Kỳ Remixx.mp3" type="audio/mpeg">
+                                <source src="audio/TriBoss  Aqua Drop Deep Bass Test.mp3" type="audio/mpeg">
                             </audio>
                         </figure>
                     </div>
 
-                    <video muted loop id="myVideo" onclick="audio()">
-                        <source src="audio/China_1080p.mp4" type="video/mp4">
-                    </video>
+
+                    <!-- <video loop id="myVideo" onclick="audio()">
+                        <source
+                            src="https://www.facebook.com/khanhvy.trieu.9400/videos/254378719515397/?notif_id=1613498644420077&notif_t=video_processed&ref=notif"
+                            type="video/mp4">
+                    </video> -->
+                    <div class="bgGif" id='bgGif' onclick="audio()"></div>
 
                     <div class="img" name='img' id='img' onclick="audio()"><span id='play'>
                             <i class="fa fa-play"></i></span><img id='imgin' src="img/2(2).png" alt="">
@@ -98,8 +109,10 @@
                     </div>
 
                     <div class="lightbottom"></div>
+                    <img style="z-index: 100000;" onclick="scrv('contact')" src="img/game-console.png" alt="" class='arrow arrowBot'>
                 </div>
             </div>
+
         </section>
         <!-- End gioithieu Section -->
 
@@ -109,7 +122,7 @@
 
 
         <!-- About Me -->
-        <section class="container section">
+        <section class="container section" id='about'>
             <div class="about">
                 <div class="box-out" id='box-out' data-aos="fade-up" data-aos-offset="250" data-aos-delay="300"
                     data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true">
@@ -137,7 +150,7 @@
                             everyone's help. That can improve the progress of the work up significantly.
                         </div>
                     </div>
-                    <img src="img/game-console.png" style="height: 70px;" alt="" class='arrow'>
+                    <img onclick="scrv('allProject')" src="img/game-console.png" alt="" class='arrow arrowBot'>
                     <!-- <i class="fa fa-angle-down arrow"></i> -->
                 </div>
 
@@ -148,7 +161,7 @@
 
         <!-- Project -->
 
-        <section class="container section">
+        <section class="container section" id='allProject'>
             <div class="project" id='pr1'>
                 <div class="leftct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="1000"
                     data-aos-easing="ease-in-out" data-aos-once="true">
@@ -185,7 +198,12 @@
                         <a href="http://gtllocal.epizy.com/" target="blank" class='live'><span>Live Demo</span></a>
                         <a href="https://github.com/gtl-201/product1_public" target="blank"
                             class='source'><span>GitHub</span></a>
+                        <img onclick="scrv('about')" src="img/game-console2.png" alt="" class='arrow arrowTop'
+                            id='arrowPUp'>
+                        <img onclick="scrv('pr2')" src="img/game-console.png" alt="" class='arrow arrowBot'
+                            id='arrowPDown'>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -217,7 +235,11 @@
                         <a href="https://github.com/gtl-201/product1_public" target="blank"
                             class='source'><span>GitHub</span></a>
                     </div>
+                    <img onclick="scrv('pr1')" src="img/game-console2.png" alt="" class='arrow arrowTop' id='arrowPUp'>
+                    <img onclick="scrv('contact')" src="img/game-console.png" alt="" class='arrow arrowBot'
+                        id='arrowPDown'>
                 </div>
+
             </div>
         </section>
         <!-- End Project 2 -->
@@ -227,7 +249,7 @@
         <!--- Contact Info -->
 
         <section id="contact" class="container section">
-            <div class="contact">
+            <div class="contact" style="position: relative;">
                 <div class="contact-header">
                     <h1><span>contact</span> info</h1>
                 </div>
@@ -267,10 +289,13 @@
                         <p><span>Start</span> at: 7.00 am</p>
                         <p><span>End</span> at: 9.00 pm</p>
                         <h2>Your trust make my Brand</h2>
+                        <img style="width: 100%;" src="gif/source.gif" alt="">
                     </div>
                 </div>
-
+                <img onclick="scrv('gioithieu')" src="img/game-console2.png" alt="" class='arrow arrscrt'>
             </div>
+
+
 
             <audio id='click' hidden>
                 <source src="audio/mouse-click-clicking-single-click-3-www.FesliyanStudios.com.mp3" type="audio/mpeg">
@@ -286,13 +311,22 @@
 </html>
 
 <script>
+    function scrv(scrollContent) {
+        document.getElementById(scrollContent).scrollIntoView({
+            block: "start",
+            behavior: "smooth"
+        })
+    }
+</script>
+
+<script>
     AOS.init();
     var x = 0;
     function audio() {
         if (x != 0) {
             document.getElementById('audio').pause();
-            document.getElementById('myVideo').style.zIndex = "-10";
-            document.getElementById('myVideo').pause();
+            // document.getElementById('myVideo').style.zIndex = "-10";
+            // document.getElementById('myVideo').pause();
             document.getElementById('play').style.display = "unset";
             document.getElementById('img').style.backgroundColor = "rgba(0, 0, 0, 0.377)";
             document.getElementById('img').style.boxShadow = "unset";
@@ -304,14 +338,16 @@
             document.getElementById('boxMusic').style.bottom = "-8%";
             document.getElementById('boxMusic').style.opacity = "0";
             document.getElementById('img').classList.remove("rotate");
-            // document.getElementById('gioithieu').style.background = "url('../gif/gif1.gif') top center no-repeat";
-            // document.getElementById('gioithieu').style.backgroundSize = "cover";
-            // document.getElementById('gioithieu').style.backgroundAttachment = "fixed";
+            document.getElementById('bgGif').style.background = "";
+            // document.getElementById('bgGif').style.backgroundSize = "unset";
+            document.getElementById('bgGif').style.backgroundAttachment = "unset";
+            document.getElementById('bgGif').style.backgroundColor = "none";
+
             x = 0;
         } else {
             document.getElementById('audio').play();
-            document.getElementById('myVideo').style.zIndex = "10000";
-            document.getElementById('myVideo').play();
+            // document.getElementById('myVideo').style.zIndex = "10000";
+            // document.getElementById('myVideo').play();
             document.getElementById('play').style.display = "none";
             document.getElementById('img').style.backgroundColor = "rgba(255, 255, 255, 0.493)";
             document.getElementById('img').style.boxShadow = "0px 0px 5px white, 0px 0px 20px white, 0px 0px 50px white,0px 0px 100px white, 0px 0px 150px white";
@@ -320,14 +356,19 @@
             document.getElementById('img').style.width = "400px";
             document.getElementById('imgin').style.height = "400px";
             document.getElementById('img').style.marginRight = "-400px";
-            document.getElementById('boxMusic').style.bottom = "5%";
+            document.getElementById('boxMusic').style.bottom = "9%";
             document.getElementById('boxMusic').style.opacity = "1";
             document.getElementById('img').classList.add("rotate");
-            // document.getElementById('gioithieu').style.background = "url('../gif/1565845276_1_be6fbcb2c4f7d05ec80cb6532b05cbda.jpg') center center no-repeat";
-            // document.getElementById('gioithieu').style.backgroundSize = "cover";
-            // document.getElementById('gioithieu').style.backgroundAttachment = "fixed";
+            document.getElementById('bgGif').style.background = "url('gif/source.gif') center center";
+            // document.getElementById('bgGif').style.backgroundSize = "cover";
+            document.getElementById('bgGif').style.backgroundAttachment = "fixed";
+            // document.getElementById('bgGif').style.backgroundColor = "green";
             x = 1;
         }
+
+        // if (document.getElementById('myVideo').pause() == true) {
+        //     document.getElementById('img').classList.remove("rotate");
+        // }
     }
 
     var y = 0;
@@ -370,64 +411,3 @@
 
     // audio();
 </script>
-
-
-<!-- <script>
-    var rota = null;
-    flag = true
-    i = 0
-    audio = document.getElementById('audio');
-    match = null;
-    document.onclick = () => {
-        var bar = document.getElementById('control_bar');
-        if (flag == true) {
-            if (i < 1) {
-                context = new AudioContext()
-                match = context.createAnalyser()
-                context.createMediaElementSource(audio).connect(match)
-                match.connect(context.destination)
-                i = 100
-            }
-            bar.style.opacity = '1';
-            bar.style.bottom = '100px';
-            audio.play()
-            loop()
-            flag = false
-            rota = setInterval(rotator, 70);
-        } else {
-            clearInterval(rota);
-            audio.pause()
-            bar.style.opacity = '0';
-            bar.style.bottom = '-100px';
-            flag = true
-        }
-    }
-    function loop() {
-        window.requestAnimationFrame(loop)
-
-        fbc = new Uint8Array(match.frequencyBinCount);
-        match.getByteFrequencyData(fbc)
-        avg = fbc.reduce((a, b) => a + b, 0) / fbc.length
-
-        document.body.style.backgroundColor = "rgb(" + (2 * avg) + "," + (avg) + "," + (avg * 1.2) + ")"
-        document.getElementById('img').style.width = avg * 5 + "px";
-        document.getElementById('img').style.height = avg * 5 + "px";
-
-
-    }
-
-    var deg = 0;
-    function rotator() {
-        console.log(3)
-
-        var div = document.getElementById("img");
-        deg = deg + 1;
-
-
-        div.style.webkitTransform = "rotate(" + deg + "deg)";
-        div.style.mozTransform = "rotate(" + deg + "deg)";
-        div.style.msTransform = "rotate(" + deg + "deg)";
-        div.style.oTransform = "rotate(" + deg + "deg)";
-        div.style.transform = "rotate(" + deg + "deg)";
-    }
-</script> -->
