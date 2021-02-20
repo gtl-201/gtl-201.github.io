@@ -292,7 +292,7 @@ a {
   animation-delay: 2.5s;
 }
 
-#gioithieu .bgGif{
+#gioithieu .bgGif {
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -383,20 +383,27 @@ a {
   background-attachment: fixed;
   background-blend-mode: multiply;
   position: relative;
+  align-items: flex-end;
+  justify-content: center;
 }
 .container .about .box-out {
-  position: absolute;
+  position: relative;
   bottom: 0px;
   width: 100%;
   /* height: 50vh; */
   display: flex;
   /* justify-content: center; */
   align-items: center;
+  /* justify-content: center; */
   flex-direction: column;
   border-top: 5px rgba(255, 0, 0, 0.829) solid;
   background-color: rgba(23, 24, 32, 0.95);
   color: white;
   transition: 0.4s;
+  overflow: scroll;
+}
+.container .about .box-out::-webkit-scrollbar {
+  width: 0px;
 }
 /* .container .about:hover .box-out {
   animation: slideUp 1s ease-in-out;
@@ -428,6 +435,7 @@ a {
 }
 .container .about .box .box-in {
   width: 30%;
+  padding-bottom: 30px;
   color: #808080;
   /* text-align: center; */
   font-size: 19px;
@@ -449,16 +457,21 @@ a {
   display: flex;
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 #pr1 {
   background: url("../img/bg.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  justify-content: flex-end;
 }
 #pr2 {
   background: url("../img/pr2.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  justify-content: flex-start;
 }
 .container .project .leftct {
   height: 100vh;
@@ -469,8 +482,13 @@ a {
   flex-direction: column;
   padding: 50px 40px;
   border-left: 7px #39c088 solid;
-  position: absolute;
+  position: relative;
   right: 0px;
+  overflow: scroll;
+}
+.container .project .leftct::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
 .container .project .rightct {
   height: 100vh;
@@ -481,7 +499,7 @@ a {
   flex-direction: column;
   padding: 50px 40px;
   border-right: 7px #39c088 solid;
-  position: absolute;
+  position: relative;
   left: 0px;
 }
 /* .container .project:hover .leftct {
@@ -706,48 +724,76 @@ a {
 /* Global Arrow */
 .arrow {
   position: absolute;
-  bottom: 12px;
+  bottom: 0px;
   height: 70px;
   transition: 0.2s;
+  opacity: 0.7;
 }
-.leftct .arrowTop {
-  right: 20px;
-  bottom: 60px;
+.arrowTop {
   animation: bounce2 2s infinite;
 }
 .arrowBot {
   animation: bounce1 2s infinite;
 }
-
-.arrowBot:hover {
-  /* height: 75px; */
-  /* animation: unset; */
-  bottom: 3px;
-}
-.arrowTop:hover {
-  /* animation: unset; */
-  bottom: 74px;
-}
-.leftct #arrowPDown {
-  right: 20px;
-}
-
-.rightct .arrowTop {
+#arrowPUpLeft {
+  bottom: 80px;
   left: 20px;
-  bottom: 60px;
   animation: bounce2 2s infinite;
 }
-.rightct #arrowPDown {
+#arrowPDownLeft {
+  bottom: 20px;
   left: 20px;
+  animation: bounce1 2s infinite;
 }
-.arrscrt{
+#arrowPUpRight {
+  bottom: 80px;
+  right: 20px;
+  animation: bounce2 2s infinite;
+}
+#arrowPDownRight {
+  bottom: 20px;
+  right: 20px;
+  animation: bounce1 2s infinite;
+}
+#arrowPUpLeft:hover,
+#arrowPUpRight:hover {
+  bottom: 90px;
+  opacity: 1;
+}
+#arrowPDownLeft:hover,
+#arrowPDownRight:hover {
+  bottom: 10px;
+  opacity: 1;
+}
+.arrowBot:hover {
+  bottom: -10px;
+  opacity: 1;
+}
+
+.arrscrt {
   right: 46%;
   bottom: 20px;
   transition: 0.2s;
   animation: bounce2 2s infinite;
 }
-.arrscrt:hover{
-  bottom: 37px;
+.arrscrt:hover {
+  bottom: 30px;
+  opacity: 1;
+}
+.rain {
+  max-height: 10vh;
+  overflow: hidden;
+}
+figcaption {
+  font-size: 25px;
+  letter-spacing: 3px;
+  position: absolute;
+  top: -35px;
+  color: #ff781f;
+  font-weight: 600;
+  text-align: center;
+  width: 340px;
+  overflow: overlay;
 }
 /*End Global Arrow */
 

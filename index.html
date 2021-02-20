@@ -57,10 +57,9 @@
 
                     <div class="boxMusic" id='boxMusic'>
 
-                        <figure id="control_bar" value='Tri Boss'>
-                            <figcaption
-                                style="font-size: 25px;letter-spacing: 3px;position:absolute;top: -35px;left: 20%;color: #ff781f;font-weight: 600;">
-                                Tri Bass Play</figcaption>
+                        <figure id="control_bar" value='friend Love'>
+                            <figcaption>
+                                Tình Bạn Diệu Kỳ</figcaption>
                             <audio id='audio' loop controls>
                                 <source src="audio/Tình Bạn Diệu Kỳ Remixx.mp3" type="audio/mpeg">
                             </audio>
@@ -109,7 +108,8 @@
                     </div>
 
                     <div class="lightbottom"></div>
-                    <img style="z-index: 100000;" onclick="scrv('contact')" src="img/game-console.png" alt="" class='arrow arrowBot'>
+                    <img style="z-index: 100000;" onclick="scrv('contact')" src="img/game-console.png" alt=""
+                        class='arrow arrowBot'>
                 </div>
             </div>
 
@@ -150,9 +150,9 @@
                             everyone's help. That can improve the progress of the work up significantly.
                         </div>
                     </div>
-                    <img onclick="scrv('allProject')" src="img/game-console.png" alt="" class='arrow arrowBot'>
                     <!-- <i class="fa fa-angle-down arrow"></i> -->
                 </div>
+                <img onclick="scrv('allProject')" src="img/game-console.png" alt="" class='arrow arrowBot'>
 
             </div>
         </section>
@@ -198,13 +198,11 @@
                         <a href="http://gtllocal.epizy.com/" target="blank" class='live'><span>Live Demo</span></a>
                         <a href="https://github.com/gtl-201/product1_public" target="blank"
                             class='source'><span>GitHub</span></a>
-                        <img onclick="scrv('about')" src="img/game-console2.png" alt="" class='arrow arrowTop'
-                            id='arrowPUp'>
-                        <img onclick="scrv('pr2')" src="img/game-console.png" alt="" class='arrow arrowBot'
-                            id='arrowPDown'>
                     </div>
-
                 </div>
+                <img onclick="scrv('about')" src="img/game-console2.png" alt="" class='arrow'
+                    id='arrowPUpLeft'>
+                <img onclick="scrv('pr2')" src="img/game-console.png" alt="" class='arrow' id='arrowPDownLeft'>
             </div>
         </section>
         <!-- End Project -->
@@ -235,10 +233,10 @@
                         <a href="https://github.com/gtl-201/product1_public" target="blank"
                             class='source'><span>GitHub</span></a>
                     </div>
-                    <img onclick="scrv('pr1')" src="img/game-console2.png" alt="" class='arrow arrowTop' id='arrowPUp'>
-                    <img onclick="scrv('contact')" src="img/game-console.png" alt="" class='arrow arrowBot'
-                        id='arrowPDown'>
                 </div>
+                <img onclick="scrv('pr1')" src="img/game-console2.png" alt="" class='arrow' id='arrowPUpRight'>
+                <img onclick="scrv('contact')" src="img/game-console.png" alt="" class='arrow'
+                    id='arrowPDownRight'>
 
             </div>
         </section>
@@ -289,7 +287,7 @@
                         <p><span>Start</span> at: 7.00 am</p>
                         <p><span>End</span> at: 9.00 pm</p>
                         <h2>Your trust make my Brand</h2>
-                        <img style="width: 100%;" src="gif/source.gif" alt="">
+                        <div class="rain"><img style="width: 100%;" src="gif/source.gif" alt=""></div>
                     </div>
                 </div>
                 <img onclick="scrv('gioithieu')" src="img/game-console2.png" alt="" class='arrow arrscrt'>
@@ -299,6 +297,9 @@
 
             <audio id='click' hidden>
                 <source src="audio/mouse-click-clicking-single-click-3-www.FesliyanStudios.com.mp3" type="audio/mpeg">
+            </audio>
+            <audio id='bass' hidden loop>
+                <source src="audio/TriBoss  Aqua Drop Deep Bass Test.mp3" type="audio/mpeg">
             </audio>
 
         </section>
@@ -390,9 +391,11 @@
         if (document.getElementById('c1').style.opacity == "1" | document.getElementById('c2').style.opacity == "1") {
             document.getElementById('c1').style.opacity = "0";
             document.getElementById('c2').style.opacity = "0";
+            document.getElementById('bass').pause();
         } else {
             document.getElementById('c1').style.opacity = "1";
             document.getElementById('c2').style.opacity = "1";
+            document.getElementById('bass').play();
         }
 
         if (document.getElementById('c1').style.opacity == "1" && document.getElementById('c2').style.opacity == "1") {
