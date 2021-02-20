@@ -54,29 +54,59 @@
         <section id="gioithieu" class='section'>
             <div class="container">
                 <div class="head">
-
                     <div class="boxMusic" id='boxMusic'>
-
-                        <figure id="control_bar" value='friend Love'>
+                        <div class="pre" onclick="nextpre('pre')"><img src="img/game-console.png" alt=""></div>
+                        <figure id="control_bar">
                             <figcaption>
                                 Tình Bạn Diệu Kỳ</figcaption>
-                            <audio id='audio' loop controls>
+                            <audio id='audio' loop controls class='audioControl'>
                                 <source src="audio/Tình Bạn Diệu Kỳ Remixx.mp3" type="audio/mpeg">
                             </audio>
                         </figure>
+                        <div class="next" onclick="nextpre('next')"><img src="img/game-console.png" alt=""></div>
                     </div>
 
+                    <div class="boxMusic" id='boxMusic'>
+                        <div class="pre" onclick="nextpre('pre')"><img src="img/game-console.png" alt=""></div>
+                        <figure id="control_bar">
+                            <figcaption>
+                                Cradles</figcaption>
+                            <audio id='audio' loop controls class='audioControl'>
+                                <source src="audio/Cradles.mp3" type="audio/mpeg">
+                            </audio>
+                        </figure>
+                        <div class="next" onclick="nextpre('next')"><img src="img/game-console.png" alt=""></div>
+                    </div>
+
+                    <div class="boxMusic" id='boxMusic'>
+                        <div class="pre" onclick="nextpre('pre')"><img src="img/game-console.png" alt=""></div>
+                        <figure id="control_bar">
+                            <figcaption>
+                                Đại Thiên Bồng</figcaption>
+                            <audio id='audio' loop controls class='audioControl'>
+                                <source src="audio/daithien.mp3" type="audio/mpeg">
+                            </audio>
+                        </figure>
+                        <div class="next" onclick="nextpre('next')"><img src="img/game-console.png" alt=""></div>
+                    </div>
 
                     <!-- <video loop id="myVideo" onclick="audio()">
                         <source
                             src="https://www.facebook.com/khanhvy.trieu.9400/videos/254378719515397/?notif_id=1613498644420077&notif_t=video_processed&ref=notif"
                             type="video/mp4">
                     </video> -->
+
                     <div class="bgGif" id='bgGif' onclick="audio()"></div>
 
-                    <div class="img" name='img' id='img' onclick="audio()"><span id='play'>
-                            <i class="fa fa-play"></i></span><img id='imgin' src="img/2(2).png" alt="">
+                    <div class="img" name='img' id='img' onclick="audio()">
+                        <span id='play'>
+                            <i class="fa fa-play"></i>
+                        </span><img id='imgin' src="img/2(2).png" alt="">
                     </div>
+
+
+
+
                     <DIV class='zIn'>
                         <h1 style="font-size: 40px;margin-bottom: 20px;">Hello, I'am GTL_201<span></span>
                             <h1>
@@ -94,6 +124,7 @@
                                     My Git
                                 </a>
                     </DIV>
+
                     <div class="switch" onclick="switchLight()"><img src="img/switch.png" alt=""></div>
                     <div class="ab">
                         <div class="circlelight c1" onclick="turnlight('c1')"> <img src="img/table-lamp.png" alt="">
@@ -101,12 +132,10 @@
                         <div class="circlelight c2" onclick="turnlight('c2')"> <img src="img/table-lamp.png" alt="">
                         </div>
                     </div>
-
                     <div class="ab">
                         <div class='lampl1' id='c1'></div>
                         <div class='lampl2' id='c2'></div>
                     </div>
-
                     <div class="lightbottom"></div>
                     <img style="z-index: 100000;" onclick="scrv('contact')" src="img/game-console.png" alt=""
                         class='arrow arrowBot'>
@@ -160,10 +189,9 @@
 
 
         <!-- Project -->
-
         <section class="container section" id='allProject'>
-            <div class="project" id='pr1'>
-                <div class="leftct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="1000"
+            <div class="project prRight" id='pr1'>
+                <div class="leftct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500"
                     data-aos-easing="ease-in-out" data-aos-once="true">
                     <!-- data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
                     <h2>Sell Colothes Website</h2>
@@ -195,13 +223,13 @@
                         </tr>
                     </table>
                     <div class="button">
-                        <a href="http://gtllocal.epizy.com/" target="blank" class='live'><span>Live Demo</span></a>
+                        <a href="http://gtllocal.epizy.com/" target="blank" class='live dancingbt'><span>Live
+                                Demo</span></a>
                         <a href="https://github.com/gtl-201/product1_public" target="blank"
-                            class='source'><span>GitHub</span></a>
+                            class='source dancingbt'><span>GitHub</span></a>
                     </div>
                 </div>
-                <img onclick="scrv('about')" src="img/game-console2.png" alt="" class='arrow'
-                    id='arrowPUpLeft'>
+                <img onclick="scrv('about')" src="img/game-console2.png" alt="" class='arrow' id='arrowPUpLeft'>
                 <img onclick="scrv('pr2')" src="img/game-console.png" alt="" class='arrow' id='arrowPDownLeft'>
             </div>
         </section>
@@ -213,8 +241,8 @@
         <!-- Project 2 -->
 
         <section class="container section">
-            <div class="project" id='pr2'>
-                <div class="rightct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="1000"
+            <div class="project prLeft" id='pr2'>
+                <div class="rightct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500"
                     data-aos-easing="ease-in-out" data-aos-once="true">
                     <!-- data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
                     <h2>Vitual Assistant</h2>
@@ -229,18 +257,54 @@
                         </tr>
                     </table>
                     <div class="button">
-                        <a href="" class='live'><span>Live Demo</span></a>
+                        <a href="" class='live dancingbt'><span>Live Demo</span></a>
                         <a href="https://github.com/gtl-201/product1_public" target="blank"
-                            class='source'><span>GitHub</span></a>
+                            class='source dancingbt'><span>GitHub</span></a>
                     </div>
                 </div>
                 <img onclick="scrv('pr1')" src="img/game-console2.png" alt="" class='arrow' id='arrowPUpRight'>
-                <img onclick="scrv('contact')" src="img/game-console.png" alt="" class='arrow'
-                    id='arrowPDownRight'>
+                <img onclick="scrv('pr3')" src="img/game-console.png" alt="" class='arrow' id='arrowPDownRight'>
 
             </div>
         </section>
         <!-- End Project 2 -->
+
+        <!-- Project 3 -->
+        <section class="container section">
+            <div class="project prRight" id='pr3'>
+                <div class="leftct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500"
+                    data-aos-easing="ease-in-out" data-aos-once="true">
+                    <!-- data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
+                    <h2>Mini Bar</h2>
+                    <h3>Solo project</h3>
+                    <h4>HTML5 + CSS3 + JS</h4>
+                    <table>
+                        <tr>
+                            <th colspan="2">Feature</th>
+                        </tr>
+                        <tr>
+                            <td>Play music</td>
+                        </tr>
+                        <tr>
+                            <td>Control play - Next, Pre, mute,...</td>
+                        </tr>
+                        <tr>
+                            <td>Let Relax</td>
+                        </tr>
+                    </table>
+                    <div class="button">
+                        <span onclick="scrv('gioithieuplay')" href="" class='live dancingbt'><span>Live
+                                Demo</span></span>
+                        <a href="https://github.com/gtl-201/product1_public" target="blank"
+                            class='source dancingbt'><span>GitHub</span></a>
+                    </div>
+                </div>
+                <img onclick="scrv('pr2')" src="img/game-console2.png" alt="" class='arrow' id='arrowPUpLeft'>
+                <img onclick="scrv('contact')" src="img/game-console.png" alt="" class='arrow' id='arrowPDownLeft'>
+
+            </div>
+        </section>
+        <!-- End Project 3 -->
 
 
 
@@ -313,6 +377,13 @@
 
 <script>
     function scrv(scrollContent) {
+        if (scrollContent == 'gioithieuplay') {
+            document.getElementById('gioithieu').scrollIntoView({
+                block: "start",
+                behavior: "smooth"
+            })
+            audio();
+        }
         document.getElementById(scrollContent).scrollIntoView({
             block: "start",
             behavior: "smooth"
@@ -321,11 +392,73 @@
 </script>
 
 <script>
+
+    var audioControl = document.getElementsByClassName('audioControl');
+    var audioo = document.getElementsByClassName('boxMusic');
+    function nextpre(play) {
+        for (i = 1; i <= audioControl.length; i++) {
+            if (play == 'next') {
+                if (audioControl[i - 1].duration > 0 && !audioControl[i - 1].paused) {
+                    if (i == audioControl.length) {
+                        audioControl[i - 1].pause();
+                        audioControl[0].play();
+                        // console.log('next to 0');
+                        // console.log(audioControl[i]);
+                        audioo[i - 1].style.bottom = "-8%";
+                        audioo[i - 1].style.opacity = "0";
+                        audioo[0].style.bottom = "9%";
+                        audioo[0].style.opacity = "1";
+                    }
+                    else {
+                        audioControl[i - 1].pause();
+                        audioControl[i].play();
+                        // console.log('next to +1');
+                        // console.log(audioControl[i]);
+                        audioo[i - 1].style.bottom = "-8%";
+                        audioo[i - 1].style.opacity = "0";
+                        audioo[i].style.bottom = "9%";
+                        audioo[i].style.opacity = "1";
+                    }
+                    break;
+                }
+            } else {
+                if (audioControl[i - 1].duration > 0 && !audioControl[i - 1].paused) {
+                    if (i == 1) {
+                        audioControl[0].pause();
+                        audioControl[(audioControl.length) - 1].play();
+                        // console.log('pre to final');
+                        // console.log(audioControl[i]);
+                        audioo[0].style.bottom = "-8%";
+                        audioo[0].style.opacity = "0";
+                        audioo[(audioControl.length) - 1].style.bottom = "9%";
+                        audioo[(audioControl.length) - 1].style.opacity = "1";
+                    }
+                    else {
+                        audioControl[i - 1].pause();
+                        audioControl[i - 2].play();
+                        // console.log('pre to -1');
+                        // console.log(audioControl[i]);
+                        audioo[i - 1].style.bottom = "-8%";
+                        audioo[i - 1].style.opacity = "0";
+                        audioo[i - 2].style.bottom = "9%";
+                        audioo[i - 2].style.opacity = "1";
+                    }
+                    break;
+                }
+            }
+        }
+    }
+
     AOS.init();
     var x = 0;
     function audio() {
         if (x != 0) {
-            document.getElementById('audio').pause();
+            // document.getElementById('audio').pause();
+            for (i = 0; i < audioControl.length; i++) {
+                audioControl[i].pause();
+                audioo[i].style.bottom = "-8%";
+                audioo[i].style.opacity = "0";
+            }
             // document.getElementById('myVideo').style.zIndex = "-10";
             // document.getElementById('myVideo').pause();
             document.getElementById('play').style.display = "unset";
@@ -381,10 +514,14 @@
         }
         if (document.getElementById('c1').style.opacity == "1" && document.getElementById('c2').style.opacity == "1") {
             document.getElementById('gioithieu').style.backgroundColor = "rgba(255, 172, 172, 0.356)";
+            // switchLight();
         } else {
             document.getElementById('gioithieu').style.backgroundColor = "rgba(37, 35, 35, 0.24)";
         }
     }
+
+        
+    
 
     function switchLight() {
         document.getElementById('click').play();

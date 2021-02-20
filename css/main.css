@@ -141,9 +141,55 @@ a {
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.377);
   transition: 0.5s ease-in-out;
+  display: flex;
   /* z-index: unset; */
   /* animation: spin 5s linear infinite; */
 }
+
+.pre,
+.next {
+  width: 40px;
+  height: 55px;
+  /* background-color: red; */
+  position: absolute;
+  bottom: 0%;
+  opacity: 0.7;
+  transition: 0.2s;
+}
+.pre {
+  left: -40px;
+  display: flex;
+  justify-content: flex-end;
+}
+.next {
+  right: -40px;
+  display: flex;
+  justify-content: flex-start;
+}
+.pre img {
+  width: 50px;
+  transform: rotateZ(90deg);
+}
+.next img {
+  width: 50px;
+  transform: rotateZ(-90deg);
+}
+.pre:hover,
+.next:hover {
+  opacity: 1;
+}
+.pre:hover {
+  transform: translateX(-7px);
+}
+.next:hover {
+  transform: translateX(7px);
+}
+/* #gioithieu .container .pre{
+  left: 35vw;
+}
+#gioithieu .container .next{
+  right: 30vw;
+} */
 #gioithieu .container .img:hover {
   /* transform:scale(1.7) translateX(34%); */
   background-color: rgba(255, 255, 255, 0.493);
@@ -459,19 +505,28 @@ a {
   height: 100vh;
   position: relative;
 }
+.prRight {
+  display: flex;
+  justify-content: flex-end;
+}
+.prLeft {
+  display: flex;
+  justify-content: flex-start;
+}
 #pr1 {
   background: url("../img/bg.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  display: flex;
-  justify-content: flex-end;
 }
 #pr2 {
   background: url("../img/pr2.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  display: flex;
-  justify-content: flex-start;
+}
+#pr3{
+  background: url("../img/1.jpg") center center no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 .container .project .leftct {
   height: 100vh;
@@ -559,8 +614,8 @@ a {
   width: 85%;
   justify-content: space-between;
 }
-.container .project .leftct .button a,
-.container .project .rightct .button a {
+.container .project .leftct .button .dancingbt,
+.container .project .rightct .button .dancingbt {
   border: 1px rgba(255, 255, 255, 0.377) solid;
   font-size: 20px;
   padding: 10px 20px;
@@ -571,26 +626,26 @@ a {
   justify-content: center;
   align-items: center;
 }
-.container .project .leftct .button a:nth-child(1),
-.container .project .rightct .button a:nth-child(1) {
+.container .project .leftct .button .dancingbt:nth-child(1),
+.container .project .rightct .button .dancingbt:nth-child(1) {
   animation: bounce 1.5s ease-out infinite;
 }
-.container .project .leftct .button a:nth-child(2),
-.container .project .rightct .button a:nth-child(2) {
+.container .project .leftct .button .dancingbt:nth-child(2),
+.container .project .rightct .button .dancingbt:nth-child(2) {
   animation: bounce 1.5s ease-out infinite;
   animation-delay: 0.2s;
 }
-.container .project .leftct .button a span,
-.container .project .rightct .button a span {
+.container .project .leftct .button .dancingbt span,
+.container .project .rightct .button .dancingbt span {
   color: white;
   transition: 0.3s ease-in-out;
 }
-.container .project .leftct .button a:hover,
-.container .project .rightct .button a:hover {
+.container .project .leftct .button .dancingbt:hover,
+.container .project .rightct .button .dancingbt:hover {
   border: 1px #ff2079 solid;
 }
-.container .project .leftct .button a:hover span,
-.container .project .rightct .button a:hover span {
+.container .project .leftct .button .dancingbt:hover span,
+.container .project .rightct .button .dancingbt:hover span {
   color: #ff2079;
 }
 .r1 {
