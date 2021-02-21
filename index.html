@@ -15,539 +15,387 @@
     <script src="js/jqr.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="js/aos.js"></script>
+    <script src="js/main.js"></script>
     <style>
         .rotate {
             animation: spin 5s linear infinite;
         }
     </style>
+
 </head>
 
 <body>
-    <div class="scrollSnap">
-        <!-- Header -->
 
-        <div id="header">
-            <div class="header">
-                <div class="nva-bar">
-                    <div class="brand">
-                        <a href="#"><span>G</span>T<span>L</span>(Gogeous<span>Life</span>)</a>
-                    </div>
-                    <div class="list">
-                        <span class='a' onclick="scrv('allProject')">Project <span>|</span> </span>
-                        <span class='a' onclick="scrv('about')">About <span>|</span> </span>
-                        <a href="https://www.facebook.com/nguyenhoanglong.1212001/"><i
-                                class="fa fa-facebook-square"></i>
-                            <span>-</span> </a>
-                        <a href="https://www.instagram.com/calitdn/"><i class="fa fa-instagram"></i> <span>-</span> </a>
-                        <a href="longkzt12001@gmail.com"><i class="fa fa-envelope"></i> <span>-</span> </a>
-                        <a href="https://github.com/gtl-201"><i class="fa fa-github"></i> <span>-</span> </a>
-                        <!-- <a href="#">Contact </a> -->
-                    </div>
+    <!-- Header -->
+
+    <div id="header">
+        <div class="header">
+            <div class="nva-bar">
+                <div class="brand">
+                    <a href="#"><span>G</span>T<span>L</span>(Gogeous<span>Life</span>)</a>
+                </div>
+                <div class="list">
+                    <span class='a' onclick="scrv('allProject')">Project <span>|</span> </span>
+                    <span class='a' onclick="scrv('about')">About <span>|</span> </span>
+                    <a href="https://www.facebook.com/nguyenhoanglong.1212001/"><i class="fa fa-facebook-square"></i>
+                        <span>-</span> </a>
+                    <a href="https://www.instagram.com/calitdn/"><i class="fa fa-instagram"></i> <span>-</span> </a>
+                    <a href="longkzt12001@gmail.com"><i class="fa fa-envelope"></i> <span>-</span> </a>
+                    <a href="https://github.com/gtl-201"><i class="fa fa-github"></i> <span>-</span> </a>
+                    <!-- <a href="#">Contact </a> -->
                 </div>
             </div>
         </div>
-        <!-- End Header -->
+    </div>
+    <!-- End Header -->
 
 
 
-        <!-- gioithieu Section -->
-        <section id="gioithieu" class='section'>
-            <div class="container">
-                <div class="head">
-                    <div class="boxMusic" id='boxMusic'>
-                        <div class="pre" onclick="nextpre('pre')"><img src="img/game-console.png" alt=""></div>
-                        <figure id="control_bar">
-                            <figcaption>
-                                Tình Bạn Diệu Kỳ</figcaption>
-                            <audio id='audio' loop controls class='audioControl'>
-                                <source src="audio/Tình Bạn Diệu Kỳ Remixx.mp3" type="audio/mpeg">
-                            </audio>
-                        </figure>
-                        <div class="next" onclick="nextpre('next')"><img src="img/game-console.png" alt=""></div>
-                    </div>
+    <!-- gioithieu Section -->
+    <section id="gioithieu" class='section'>
+        <div class="container">
+            <div class="head">
+                <div class="boxMusic" id='boxMusic'>
+                    <div class="pre" onclick="nextpre('pre')"><img src="img/game-console.png" alt=""></div>
+                    <figure id="control_bar">
+                        <figcaption>
+                            Tình Bạn Diệu Kỳ</figcaption>
+                        <audio id='audio' loop controls class='audioControl' id='au1'>
+                            <source src="audio/Tình Bạn Diệu Kỳ Remixx.mp3" type="audio/mpeg">
+                        </audio>
+                    </figure>
+                    <div class="next" onclick="nextpre('next')"><img src="img/game-console.png" alt=""></div>
+                </div>
 
-                    <div class="boxMusic" id='boxMusic'>
-                        <div class="pre" onclick="nextpre('pre')"><img src="img/game-console.png" alt=""></div>
-                        <figure id="control_bar">
-                            <figcaption>
-                                Cradles</figcaption>
-                            <audio id='audio' loop controls class='audioControl'>
-                                <source src="audio/Cradles.mp3" type="audio/mpeg">
-                            </audio>
-                        </figure>
-                        <div class="next" onclick="nextpre('next')"><img src="img/game-console.png" alt=""></div>
-                    </div>
+                <div class="boxMusic" id='boxMusic'>
+                    <div class="pre" onclick="nextpre('pre')"><img src="img/game-console.png" alt=""></div>
+                    <figure id="control_bar">
+                        <figcaption>
+                            Cradles</figcaption>
+                        <audio id='audio' loop controls class='audioControl'>
+                            <source src="audio/Cradles.mp3" type="audio/mpeg">
+                        </audio>
+                    </figure>
+                    <div class="next" onclick="nextpre('next')"><img src="img/game-console.png" alt=""></div>
+                </div>
 
-                    <div class="boxMusic" id='boxMusic'>
-                        <div class="pre" onclick="nextpre('pre')"><img src="img/game-console.png" alt=""></div>
-                        <figure id="control_bar">
-                            <figcaption>
-                                Đại Thiên Bồng</figcaption>
-                            <audio id='audio' loop controls class='audioControl'>
-                                <source src="audio/daithien.mp3" type="audio/mpeg">
-                            </audio>
-                        </figure>
-                        <div class="next" onclick="nextpre('next')"><img src="img/game-console.png" alt=""></div>
-                    </div>
+                <div class="boxMusic" id='boxMusic'>
+                    <div class="pre" onclick="nextpre('pre')"><img src="img/game-console.png" alt=""></div>
+                    <figure id="control_bar">
+                        <figcaption>
+                            Đại Thiên Bồng</figcaption>
+                        <audio id='audio' loop controls class='audioControl'>
+                            <source src="audio/daithien.mp3" type="audio/mpeg">
+                        </audio>
+                    </figure>
+                    <div class="next" onclick="nextpre('next')"><img src="img/game-console.png" alt=""></div>
+                </div>
 
-                    <!-- <video loop id="myVideo" onclick="audio()">
+                <!-- <video loop id="myVideo" onclick="audio()">
                         <source
                             src="https://www.facebook.com/khanhvy.trieu.9400/videos/254378719515397/?notif_id=1613498644420077&notif_t=video_processed&ref=notif"
                             type="video/mp4">
                     </video> -->
 
-                    <div class="bgGif" id='bgGif' onclick="audio()"></div>
+                <div class="bgGif" id='bgGif' onclick="audio()"></div>
 
-                    <div class="img" name='img' id='img' onclick="audio()">
+                <div class="center">
+                    <div class="img" name='img' id='img' onclick="audio()" style="min-height: 360px;min-width: 360px;">
                         <span id='play'>
                             <i class="fa fa-play"></i>
                         </span><img id='imgin' src="img/2(2).png" alt="">
                     </div>
+                </div>
 
 
 
 
-                    <DIV class='zIn'>
-                        <h1 style="font-size: 40px;margin-bottom: 20px;">Hello, I'am GTL_201<span></span>
-                            <h1>
-                                <!-- <h1> <span></span></h1> -->
-                                <h1 style="font-size: 20px;margin-bottom: 10px;"><i>Nguyen Hoang Long </i> <span></span>
-                                </h1>
 
-                                <a style="font-size:25px;font-weight: 600;padding: 6px 15px;"
-                                    href="https://github.com/gtl-201" target="_blank" class="cta">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    My Git
-                                </a>
-                    </DIV>
+                <DIV class='zIn' id='zIn'>
+                    <h1 style="font-size: 40px;margin-bottom: 20px;">Hello, I'am GTL_201<span></span>
+                        <h1>
+                            <!-- <h1> <span></span></h1> -->
+                            <h1 style="font-size: 20px;margin-bottom: 10px;"><i>Nguyen Hoang Long </i> <span></span>
+                            </h1>
 
-                    <div class="switch" onclick="switchLight()"><img src="img/switch.png" alt=""></div>
-                    <div class="ab">
-                        <div class="circlelight c1" onclick="turnlight('c1')"> <img src="img/table-lamp.png" alt="">
-                        </div>
-                        <div class="circlelight c2" onclick="turnlight('c2')"> <img src="img/table-lamp.png" alt="">
-                        </div>
+                            <a style="font-size:25px;font-weight: 600;padding: 6px 15px;"
+                                href="https://github.com/gtl-201" target="_blank" class="cta">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                My Git
+                            </a>
+                </DIV>
+
+                <div class="switch" onclick="switchLight()"><img src="img/switch.png" alt=""></div>
+                <div class="ab">
+                    <div class="circlelight c1" onclick="turnlight('c1')"> <img src="img/table-lamp.png" alt="">
                     </div>
-                    <div class="ab">
-                        <div class='lampl1' id='c1'></div>
-                        <div class='lampl2' id='c2'></div>
+                    <div class="circlelight c2" onclick="turnlight('c2')"> <img src="img/table-lamp.png" alt="">
                     </div>
-                    <div class="lightbottom"></div>
-                    <img style="z-index: 100000;" onclick="scrv('contact')" src="img/game-console.png" alt=""
-                        class='arrow arrowBot'>
+                </div>
+                <div class="ab">
+                    <div class='lampl1' id='c1'></div>
+                    <div class='lampl2' id='c2'></div>
+                </div>
+                <div class="lightbottom"></div>
+                <img style="z-index: 100000;" onclick="scrv('contact')" src="img/game-console.png" alt=""
+                    class='arrow arrowBot'>
+            </div>
+        </div>
+
+    </section>
+    <!-- End gioithieu Section -->
+
+
+    <!-- Service -->
+    <!-- End Service -->
+
+
+    <!-- About Me -->
+    <section class="container section" id='about'>
+        <div class="about">
+            <div class="box-out" id='box-out' data-aos="fade-up" data-aos-offset="250" data-aos-delay="300"
+                data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true">
+                <!-- data-aos="fade-up" data-aos-offset="240" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
+                <h1>About me!</h1>
+                <div class='box'>
+                    <div class="box-in" id='box-in'>
+                        My name is Nguyen Hoang Long. Currently, I am a web developer. I am a careful
+                        and hardworking person. I want to study and enjoy working with people. I adapt easily to
+                        work
+                        and the environment is proactive at work.
+                    </div>
+                    <div class="box-in" id='box-in'>
+                        I strongly believe that a great software engineer is a hybrid combination of
+                        technical skills as well as soft skills, which are important in communicating with customers
+                        and
+                        colleagues to reach the best result for the business.I have learned how important is to
+                        maintain
+                        the functionality while boosting the performance, reliability, flexibility, and
+                        manageability.
+                    </div>
+                    <div class="box-in" id='box-in'>
+                        I like to work in groups rather than work individually, because when working
+                        by In groups, I can support people, or vice versa, if I have a problem, I can. Thanks for
+                        everyone's help. That can improve the progress of the work up significantly.
+                    </div>
+                </div>
+                <!-- <i class="fa fa-angle-down arrow"></i> -->
+            </div>
+            <img onclick="scrv('allProject')" src="img/game-console.png" alt="" class='arrow arrowBot'>
+
+        </div>
+    </section>
+    <!-- End About Me -->
+
+
+    <!-- Project -->
+    <section class="container section" id='allProject'>
+        <div class="project prRight" id='pr1'>
+            <div class="leftct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500"
+                data-aos-easing="ease-in-out" data-aos-once="true">
+                <!-- data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
+                <h2>Sell Colothes Website</h2>
+                <h3>Solo project</h3>
+                <h4>Make by PHP / HTML5 / CSS3 / JAVASCRIPT</h4>
+                <table>
+                    <tr>
+                        <th colspan="2">Feature</th>
+                    </tr>
+                    <tr>
+                        <td class='r1'>Admin</td>
+                        <td class='r1'>Customer</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <ul>
+                                <li>add-edit product / brand / type / ...</li>
+                                <li>manage order</li>
+                                <li>Create smaller account admin ...</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>See product / found</li>
+                                <li>Setup and use own account</li>
+                                <li>Make order ...</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="button">
+                    <a href="http://gtlshop.epizy.com/" target="blank" class='live dancingbt'><span>Live
+                            Demo</span></a>
+                    <a href="https://github.com/gtl-201/product1_public" target="blank"
+                        class='source dancingbt'><span>GitHub</span></a>
+                </div>
+            </div>
+            <img onclick="scrv('about')" src="img/game-console2.png" alt="" class='arrow' id='arrowPUpLeft'>
+            <img onclick="scrv('pr2')" src="img/game-console.png" alt="" class='arrow' id='arrowPDownLeft'>
+        </div>
+    </section>
+    <!-- End Project -->
+
+
+
+
+    <!-- Project 2 -->
+
+    <section class="container section">
+        <div class="project prLeft" id='pr2'>
+            <div class="rightct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500"
+                data-aos-easing="ease-in-out" data-aos-once="true">
+                <!-- data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
+                <h2>Vitual Assistant</h2>
+                <h3>Solo project</h3>
+                <h4>Make by PYTHON</h4>
+                <table>
+                    <tr>
+                        <th colspan="2">Feature</th>
+                    </tr>
+                    <tr>
+                        <td>Voice-based conputer execution</td>
+                    </tr>
+                </table>
+                <div class="button">
+                    <a href="" class='live dancingbt'><span>Live Demo</span></a>
+                    <a href="https://github.com/gtl-201/product1_public" target="blank"
+                        class='source dancingbt'><span>GitHub</span></a>
+                </div>
+            </div>
+            <img onclick="scrv('pr1')" src="img/game-console2.png" alt="" class='arrow' id='arrowPUpRight'>
+            <img onclick="scrv('pr3')" src="img/game-console.png" alt="" class='arrow' id='arrowPDownRight'>
+
+        </div>
+    </section>
+    <!-- End Project 2 -->
+
+    <!-- Project 3 -->
+    <section class="container section">
+        <div class="project prRight" id='pr3'>
+            <div class="leftct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500"
+                data-aos-easing="ease-in-out" data-aos-once="true">
+                <!-- data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
+                <h2>Mini Bar</h2>
+                <h3>Solo project</h3>
+                <h4>HTML5 + CSS3 + JS</h4>
+                <table>
+                    <tr>
+                        <th colspan="2">Feature</th>
+                    </tr>
+                    <tr>
+                        <td>Play music</td>
+                    </tr>
+                    <tr>
+                        <td>Control play - Next, Pre, mute,...</td>
+                    </tr>
+                    <tr>
+                        <td>Let Relax</td>
+                    </tr>
+                </table>
+                <div class="button">
+                    <span onclick="scrv('gioithieuplay')" href="" class='live dancingbt'><span>Live
+                            Demo</span></span>
+                    <a href="https://github.com/gtl-201/product1_public" target="blank"
+                        class='source dancingbt'><span>GitHub</span></a>
+                </div>
+            </div>
+            <img onclick="scrv('pr2')" src="img/game-console2.png" alt="" class='arrow' id='arrowPUpLeft'>
+            <img onclick="scrv('contact')" src="img/game-console.png" alt="" class='arrow' id='arrowPDownLeft'>
+
+        </div>
+    </section>
+    <!-- End Project 3 -->
+
+
+
+    <!--- Contact Info -->
+
+    <section id="contact" class="container section">
+        <div class="contact" style="position: relative;">
+            <div class="contact-header">
+                <h1><span>contact</span> info</h1>
+            </div>
+            <div class="contact-fotter">
+                <div class="contact-item">
+                    <div class="contact-img"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
+                    <div class="contact-text">
+                        <h1>Phone</h1>
+                        <p>+08 683 383 14</p>
+                        <p>+08 683 383 14</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-img"><img src="https://img.icons8.com/bubbles/100/000000/email.png" /></div>
+                    <div class="contact-text">
+                        <h1>Email</h1>
+                        <p>Gl-love@gmail.com</p>
+                        <p>GT-love@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-img"><img src="https://img.icons8.com/bubbles/100/000000/map.png" /></div>
+                    <div class="contact-text">
+                        <h1>Address</h1>
+                        <p>Viet Nam</p>
+                        <p>Ha Noi</p>
+                        <p>LandMark 81</p>
+                    </div>
                 </div>
             </div>
 
-        </section>
-        <!-- End gioithieu Section -->
-
-
-        <!-- Service -->
-        <!-- End Service -->
-
-
-        <!-- About Me -->
-        <section class="container section" id='about'>
-            <div class="about">
-                <div class="box-out" id='box-out' data-aos="fade-up" data-aos-offset="250" data-aos-delay="300"
-                    data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true">
-                    <!-- data-aos="fade-up" data-aos-offset="240" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
-                    <h1>About me!</h1>
-                    <div class='box'>
-                        <div class="box-in" id='box-in'>
-                            My name is Nguyen Hoang Long. Currently, I am a web developer. I am a careful
-                            and hardworking person. I want to study and enjoy working with people. I adapt easily to
-                            work
-                            and the environment is proactive at work.
-                        </div>
-                        <div class="box-in" id='box-in'>
-                            I strongly believe that a great software engineer is a hybrid combination of
-                            technical skills as well as soft skills, which are important in communicating with customers
-                            and
-                            colleagues to reach the best result for the business.I have learned how important is to
-                            maintain
-                            the functionality while boosting the performance, reliability, flexibility, and
-                            manageability.
-                        </div>
-                        <div class="box-in" id='box-in'>
-                            I like to work in groups rather than work individually, because when working
-                            by In groups, I can support people, or vice versa, if I have a problem, I can. Thanks for
-                            everyone's help. That can improve the progress of the work up significantly.
-                        </div>
-                    </div>
-                    <!-- <i class="fa fa-angle-down arrow"></i> -->
+            <div class="contact-fotter2">
+                <div class="hour">
+                    <h1>Working Time</h1>
+                    <p><span>Start</span> at: 7.00 am</p>
+                    <p><span>End</span> at: 9.00 pm</p>
+                    <h2>Your trust make my Brand</h2>
+                    <div class="rain"><img style="width: 100%;" src="gif/source.gif" alt=""></div>
                 </div>
-                <img onclick="scrv('allProject')" src="img/game-console.png" alt="" class='arrow arrowBot'>
-
             </div>
-        </section>
-        <!-- End About Me -->
-
-
-        <!-- Project -->
-        <section class="container section" id='allProject'>
-            <div class="project prRight" id='pr1'>
-                <div class="leftct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500"
-                    data-aos-easing="ease-in-out" data-aos-once="true">
-                    <!-- data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
-                    <h2>Sell Colothes Website</h2>
-                    <h3>Solo project</h3>
-                    <h4>Make by PHP / HTML5 / CSS3 / JAVASCRIPT</h4>
-                    <table>
-                        <tr>
-                            <th colspan="2">Feature</th>
-                        </tr>
-                        <tr>
-                            <td class='r1'>Admin</td>
-                            <td class='r1'>Customer</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <ul>
-                                    <li>add-edit product / brand / type / ...</li>
-                                    <li>manage order</li>
-                                    <li>Create smaller account admin ...</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>See product / found</li>
-                                    <li>Setup and use own account</li>
-                                    <li>Make order ...</li>
-                                </ul>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="button">
-                        <a href="http://gtllocal.epizy.com/" target="blank" class='live dancingbt'><span>Live
-                                Demo</span></a>
-                        <a href="https://github.com/gtl-201/product1_public" target="blank"
-                            class='source dancingbt'><span>GitHub</span></a>
-                    </div>
-                </div>
-                <img onclick="scrv('about')" src="img/game-console2.png" alt="" class='arrow' id='arrowPUpLeft'>
-                <img onclick="scrv('pr2')" src="img/game-console.png" alt="" class='arrow' id='arrowPDownLeft'>
-            </div>
-        </section>
-        <!-- End Project -->
+            <img onclick="scrv('gioithieu')" src="img/game-console2.png" alt="" class='arrow arrscrt'>
+        </div>
 
 
 
+        <audio id='click' hidden>
+            <source src="audio/mouse-click-clicking-single-click-3-www.FesliyanStudios.com.mp3" type="audio/mpeg">
+        </audio>
+        <audio id='bass' hidden loop>
+            <source src="audio/TriBoss  Aqua Drop Deep Bass Test.mp3" type="audio/mpeg">
+        </audio>
 
-        <!-- Project 2 -->
+    </section>
 
-        <section class="container section">
-            <div class="project prLeft" id='pr2'>
-                <div class="rightct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500"
-                    data-aos-easing="ease-in-out" data-aos-once="true">
-                    <!-- data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
-                    <h2>Vitual Assistant</h2>
-                    <h3>Solo project</h3>
-                    <h4>Make by PYTHON</h4>
-                    <table>
-                        <tr>
-                            <th colspan="2">Feature</th>
-                        </tr>
-                        <tr>
-                            <td>Voice-based conputer execution</td>
-                        </tr>
-                    </table>
-                    <div class="button">
-                        <a href="" class='live dancingbt'><span>Live Demo</span></a>
-                        <a href="https://github.com/gtl-201/product1_public" target="blank"
-                            class='source dancingbt'><span>GitHub</span></a>
-                    </div>
-                </div>
-                <img onclick="scrv('pr1')" src="img/game-console2.png" alt="" class='arrow' id='arrowPUpRight'>
-                <img onclick="scrv('pr3')" src="img/game-console.png" alt="" class='arrow' id='arrowPDownRight'>
+    <!--- End Contact Info -->
 
-            </div>
-        </section>
-        <!-- End Project 2 -->
-
-        <!-- Project 3 -->
-        <section class="container section">
-            <div class="project prRight" id='pr3'>
-                <div class="leftct" data-aos="fade-right" data-aos-duration="700" data-aos-delay="500"
-                    data-aos-easing="ease-in-out" data-aos-once="true">
-                    <!-- data-aos="fade-right" data-aos-duration="700" data-aos-easing="ease-in-out" data-aos-once="true" -->
-                    <h2>Mini Bar</h2>
-                    <h3>Solo project</h3>
-                    <h4>HTML5 + CSS3 + JS</h4>
-                    <table>
-                        <tr>
-                            <th colspan="2">Feature</th>
-                        </tr>
-                        <tr>
-                            <td>Play music</td>
-                        </tr>
-                        <tr>
-                            <td>Control play - Next, Pre, mute,...</td>
-                        </tr>
-                        <tr>
-                            <td>Let Relax</td>
-                        </tr>
-                    </table>
-                    <div class="button">
-                        <span onclick="scrv('gioithieuplay')" href="" class='live dancingbt'><span>Live
-                                Demo</span></span>
-                        <a href="https://github.com/gtl-201/product1_public" target="blank"
-                            class='source dancingbt'><span>GitHub</span></a>
-                    </div>
-                </div>
-                <img onclick="scrv('pr2')" src="img/game-console2.png" alt="" class='arrow' id='arrowPUpLeft'>
-                <img onclick="scrv('contact')" src="img/game-console.png" alt="" class='arrow' id='arrowPDownLeft'>
-
-            </div>
-        </section>
-        <!-- End Project 3 -->
-
-
-
-        <!--- Contact Info -->
-
-        <section id="contact" class="container section">
-            <div class="contact" style="position: relative;">
-                <div class="contact-header">
-                    <h1><span>contact</span> info</h1>
-                </div>
-                <div class="contact-fotter">
-                    <div class="contact-item">
-                        <div class="contact-img"><img src="https://img.icons8.com/bubbles/100/000000/phone.png" /></div>
-                        <div class="contact-text">
-                            <h1>Phone</h1>
-                            <p>+08 683 383 14</p>
-                            <p>+08 683 383 14</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-img"><img src="https://img.icons8.com/bubbles/100/000000/email.png" /></div>
-                        <div class="contact-text">
-                            <h1>Email</h1>
-                            <p>Gl-love@gmail.com</p>
-                            <p>GT-love@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-img"><img src="https://img.icons8.com/bubbles/100/000000/map.png" /></div>
-                        <div class="contact-text">
-                            <h1>Address</h1>
-                            <p>Viet Nam</p>
-                            <p>Ha Noi</p>
-                            <p>LandMark 81</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-fotter2">
-                    <div class="hour">
-                        <h1>Working Time</h1>
-                        <p><span>Start</span> at: 7.00 am</p>
-                        <p><span>End</span> at: 9.00 pm</p>
-                        <h2>Your trust make my Brand</h2>
-                        <div class="rain"><img style="width: 100%;" src="gif/source.gif" alt=""></div>
-                    </div>
-                </div>
-                <img onclick="scrv('gioithieu')" src="img/game-console2.png" alt="" class='arrow arrscrt'>
-            </div>
-
-
-
-            <audio id='click' hidden>
-                <source src="audio/mouse-click-clicking-single-click-3-www.FesliyanStudios.com.mp3" type="audio/mpeg">
-            </audio>
-            <audio id='bass' hidden loop>
-                <source src="audio/TriBoss  Aqua Drop Deep Bass Test.mp3" type="audio/mpeg">
-            </audio>
-
-        </section>
-
-        <!--- End Contact Info -->
-    </div>
 
 </body>
 
 </html>
 
 <script>
-    function scrv(scrollContent) {
-        if (scrollContent == 'gioithieuplay') {
-            document.getElementById('gioithieu').scrollIntoView({
-                block: "start",
-                behavior: "smooth"
-            })
-            audio();
-        }
-        document.getElementById(scrollContent).scrollIntoView({
-            block: "start",
-            behavior: "smooth"
-        })
-    }
-</script>
-
-<script>
-
-    var audioControl = document.getElementsByClassName('audioControl');
-    var audioo = document.getElementsByClassName('boxMusic');
-    function nextpre(play) {
-        for (i = 1; i <= audioControl.length; i++) {
-            if (play == 'next') {
-                if (audioControl[i - 1].duration > 0 && !audioControl[i - 1].paused) {
-                    if (i == audioControl.length) {
-                        audioControl[i - 1].pause();
-                        audioControl[0].play();
-                        // console.log('next to 0');
-                        // console.log(audioControl[i]);
-                        audioo[i - 1].style.bottom = "-8%";
-                        audioo[i - 1].style.opacity = "0";
-                        audioo[0].style.bottom = "9%";
-                        audioo[0].style.opacity = "1";
-                    }
-                    else {
-                        audioControl[i - 1].pause();
-                        audioControl[i].play();
-                        // console.log('next to +1');
-                        // console.log(audioControl[i]);
-                        audioo[i - 1].style.bottom = "-8%";
-                        audioo[i - 1].style.opacity = "0";
-                        audioo[i].style.bottom = "9%";
-                        audioo[i].style.opacity = "1";
-                    }
-                    break;
-                }
-            } else {
-                if (audioControl[i - 1].duration > 0 && !audioControl[i - 1].paused) {
-                    if (i == 1) {
-                        audioControl[0].pause();
-                        audioControl[(audioControl.length) - 1].play();
-                        // console.log('pre to final');
-                        // console.log(audioControl[i]);
-                        audioo[0].style.bottom = "-8%";
-                        audioo[0].style.opacity = "0";
-                        audioo[(audioControl.length) - 1].style.bottom = "9%";
-                        audioo[(audioControl.length) - 1].style.opacity = "1";
-                    }
-                    else {
-                        audioControl[i - 1].pause();
-                        audioControl[i - 2].play();
-                        // console.log('pre to -1');
-                        // console.log(audioControl[i]);
-                        audioo[i - 1].style.bottom = "-8%";
-                        audioo[i - 1].style.opacity = "0";
-                        audioo[i - 2].style.bottom = "9%";
-                        audioo[i - 2].style.opacity = "1";
-                    }
-                    break;
-                }
-            }
-        }
-    }
-
+    var audioControl = document.getElementsByClassName("audioControl");
+    var audioo = document.getElementsByClassName("boxMusic");
     AOS.init();
     var x = 0;
-    function audio() {
-        if (x != 0) {
-            // document.getElementById('audio').pause();
-            for (i = 0; i < audioControl.length; i++) {
-                audioControl[i].pause();
-                audioo[i].style.bottom = "-8%";
-                audioo[i].style.opacity = "0";
-            }
-            // document.getElementById('myVideo').style.zIndex = "-10";
-            // document.getElementById('myVideo').pause();
-            document.getElementById('play').style.display = "unset";
-            document.getElementById('img').style.backgroundColor = "rgba(0, 0, 0, 0.377)";
-            document.getElementById('img').style.boxShadow = "unset";
-            document.getElementById('img').style.zIndex = "unset";
-            document.getElementById('img').style.height = "360px";
-            document.getElementById('img').style.width = "360px";
-            document.getElementById('imgin').style.height = "360px";
-            document.getElementById('img').style.marginRight = "30px";
-            document.getElementById('boxMusic').style.bottom = "-8%";
-            document.getElementById('boxMusic').style.opacity = "0";
-            document.getElementById('img').classList.remove("rotate");
-            document.getElementById('bgGif').style.background = "";
-            // document.getElementById('bgGif').style.backgroundSize = "unset";
-            document.getElementById('bgGif').style.backgroundAttachment = "unset";
-            document.getElementById('bgGif').style.backgroundColor = "none";
-
-            x = 0;
-        } else {
-            document.getElementById('audio').play();
-            // document.getElementById('myVideo').style.zIndex = "10000";
-            // document.getElementById('myVideo').play();
-            document.getElementById('play').style.display = "none";
-            document.getElementById('img').style.backgroundColor = "rgba(255, 255, 255, 0.493)";
-            document.getElementById('img').style.boxShadow = "0px 0px 5px white, 0px 0px 20px white, 0px 0px 50px white,0px 0px 100px white, 0px 0px 150px white";
-            document.getElementById('img').style.zIndex = "11000";
-            document.getElementById('img').style.height = "400px";
-            document.getElementById('img').style.width = "400px";
-            document.getElementById('imgin').style.height = "400px";
-            document.getElementById('img').style.marginRight = "-400px";
-            document.getElementById('boxMusic').style.bottom = "9%";
-            document.getElementById('boxMusic').style.opacity = "1";
-            document.getElementById('img').classList.add("rotate");
-            document.getElementById('bgGif').style.background = "url('gif/source.gif') center center";
-            // document.getElementById('bgGif').style.backgroundSize = "cover";
-            document.getElementById('bgGif').style.backgroundAttachment = "fixed";
-            // document.getElementById('bgGif').style.backgroundColor = "green";
-            x = 1;
-        }
-
-        // if (document.getElementById('myVideo').pause() == true) {
-        //     document.getElementById('img').classList.remove("rotate");
-        // }
-    }
-
     var y = 0;
-    function turnlight(z) {
-        if (document.getElementById(z).style.opacity == "1") {
-            document.getElementById(z).style.opacity = "0";
-        } else {
-            document.getElementById(z).style.opacity = "1";
-        }
-        if (document.getElementById('c1').style.opacity == "1" && document.getElementById('c2').style.opacity == "1") {
-            document.getElementById('gioithieu').style.backgroundColor = "rgba(255, 172, 172, 0.356)";
-            // switchLight();
-        } else {
-            document.getElementById('gioithieu').style.backgroundColor = "rgba(37, 35, 35, 0.24)";
-        }
-    }
 
-        
-    
+    // context = new AudioContext();
+    // depzai = context.createAnalyser();
+    // context.createMediaElementSource(audioControl[0]).connect(depzai);
+    // depzai.connect(context.destination);
 
-    function switchLight() {
-        document.getElementById('click').play();
-        if (document.getElementById('c1').style.opacity == "1" | document.getElementById('c2').style.opacity == "1") {
-            document.getElementById('c1').style.opacity = "0";
-            document.getElementById('c2').style.opacity = "0";
-            document.getElementById('bass').pause();
-        } else {
-            document.getElementById('c1').style.opacity = "1";
-            document.getElementById('c2').style.opacity = "1";
-            document.getElementById('bass').play();
-        }
-
-        if (document.getElementById('c1').style.opacity == "1" && document.getElementById('c2').style.opacity == "1") {
-            document.getElementById('gioithieu').style.backgroundColor = "rgba(255, 172, 172, 0.356)";
-        } else {
-            document.getElementById('gioithieu').style.backgroundColor = "rgba(37, 35, 35, 0.24)";
-        }
-
-    }
+    // context = new AudioContext();
+    // depzai = context.createAnalyser();
+    // context.createMediaElementSource(audioControl[1]).connect(depzai);
+    // depzai.connect(context.destination);
 
 
 
-
-
-
-
-    // audio();
 </script>
