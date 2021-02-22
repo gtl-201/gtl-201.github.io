@@ -17,7 +17,8 @@ function loopstart() {
     if (!audioControl[i].paused) {
       context = new AudioContext();
       depzai = context.createAnalyser();
-      context.createMediaElementSource(audioControl[i]).connect(depzai);
+      source = context.createMediaElementSource(audioControl[i]);
+      source.connect(depzai);
       depzai.connect(context.destination);
       loop("audioControl[" + i + "]");
       return;
@@ -83,8 +84,8 @@ function nextpre(play) {
   }
 }
 
-AOS.init();
-var x = 0;
+// AOS.init();
+// var x = 0;
 function audio() {
   if (x != 0) {
     // document.getElementById('audio').pause();
@@ -104,7 +105,7 @@ function audio() {
     document.getElementById("img").style.width = "360px";
     document.getElementById("imgin").style.height = "360px";
     document.getElementById("img").style.marginRight = "30px";
-    document.getElementById("zIn").style.display='unset';
+    document.getElementById("zIn").style.display = "unset";
     document.getElementById("boxMusic").style.bottom = "-8%";
     document.getElementById("boxMusic").style.opacity = "0";
     document.getElementById("img").classList.remove("rotate");
@@ -127,7 +128,7 @@ function audio() {
     document.getElementById("img").style.width = "400px";
     document.getElementById("imgin").style.height = "400px";
     document.getElementById("img").style.marginRight = "0px";
-    document.getElementById("zIn").style.display='none';
+    document.getElementById("zIn").style.display = "none";
     document.getElementById("boxMusic").style.bottom = "9%";
     document.getElementById("boxMusic").style.opacity = "1";
     document.getElementById("img").classList.add("rotate");
@@ -192,50 +193,37 @@ function switchLight() {
       "rgba(37, 35, 35, 0.24)";
   }
 }
-
-// Xin moi`
-
+var avgCheck = 0;
 function loop(x) {
-  window.requestAnimationFrame(loop);
-  fbc = new Uint8Array(depzai.frequencyBinCount);
-  depzai.getByteFrequencyData(fbc);
-  avg = fbc.reduce((a, b) => a + b, 0) / fbc.length;
+  if (avgCheck > 20) {
+    document.getElementById("img").style.boxShadow = "unset";
+    avgCheck = 0;
+    return false;
+  } else {
+    window.requestAnimationFrame(loop);
+    fbc = new Uint8Array(depzai.frequencyBinCount);
+    depzai.getByteFrequencyData(fbc);
+    avg = fbc.reduce((a, b) => a + b, 0) / fbc.length;
 
-  document.getElementById("img").style.height = (avg + 240) * 1.5 + "px";
-  document.getElementById("img").style.width = (avg + 240) * 1.5 + "px";
-  document.getElementById("imgin").style.height = (avg + 240) * 1.5 + 20 + "px";
-  document.getElementById("img").style.boxShadow ="0px 0px 5px white, 0px 0px 20px white, 0px 0px "+(avg + 50) +"px white,0px 0px "+(avg + 150) +"px white, 0px 0px "+(avg + 150) +"px white";
+    document.getElementById("img").style.height = (avg + 240) * 1.5 + "px";
+    document.getElementById("img").style.width = (avg + 240) * 1.5 + "px";
+    document.getElementById("imgin").style.height =
+      (avg + 240) * 1.5 + 20 + "px";
+    document.getElementById("img").style.boxShadow =
+      "0px 0px 5px white, 0px 0px 20px white, 0px 0px " +
+      (avg + 50) +
+      "px white,0px 0px " +
+      (avg + 150) +
+      "px white, 0px 0px " +
+      (avg + 150) +
+      "px white";
+    if (avg == 0) {
+      avgCheck++;
+    }
+    console.log(avgCheck);
+    console.log(avg);
 
-  console.log(avg);
-  if (x.paused) {
-    return;
   }
 }
 
-// flag = true;
-// p=0;
-// audio = document.getElementsByClassName('audioControl');
 // document.getElementById('img').onclick()= () =>{
-//     if(flag==true){
-//       if(p<1){
-//         context = new AudioContext();
-//         match = context.createAnalyser();
-//         context.createMediaElementSource(audio[0]).connect(match);
-//         match.connect(context.destination);
-//         p=1000;
-//         flag =false;
-//       }
-//       audio[0].play;
-//       lopp();
-//     }else{
-//       flag = true;
-//       audio[0].pause;
-//     }
-// }
-// function loop(){
-//   window.requestAnimationFrame(loop);
-//   fbc = new Uint8Array(match.frequencyBinCount);
-//   match.getByteFrequencyData(fbc);
-//   avg = fbc.reduce((a,b) => a + b ,0) /fbc.length;
-//   document.getElementById('img').style.width = avg *2 ;
-// }
