@@ -12,16 +12,21 @@ function scrv(scrollContent) {
   });
 }
 
+p = 0;
 function loopstart() {
   for (i = 0; i < audioControl.length; i++) {
     if (!audioControl[i].paused) {
-      context = new AudioContext();
-      depzai = context.createAnalyser();
-      source = context.createMediaElementSource(audioControl[i]);
-      source.connect(depzai);
-      depzai.connect(context.destination);
+      if (p < 1) {
+        context = new AudioContext();
+        depzai = context.createAnalyser();
+        source = context.createMediaElementSource(audioControl[i]);
+        source.connect(depzai);
+        depzai.connect(context.destination);
+        p = 1;
+      }
       loop("audioControl[" + i + "]");
-      return;
+
+      // return;
     }
   }
 }
@@ -217,12 +222,13 @@ function loop(x) {
       "px white, 0px 0px " +
       (avg + 150) +
       "px white";
+    // document.getElementById("boxMusic").style.boxShadow =
+    //   "box-shadow: 0 0px " + (avg + 20) + "px white";
     if (avg == 0) {
       avgCheck++;
     }
-    console.log(avgCheck);
+    // console.log(avgCheck);
     console.log(avg);
-
   }
 }
 
