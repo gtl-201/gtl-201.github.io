@@ -146,7 +146,7 @@ a {
   /* z-index: unset; */
   /* animation: spin 5s linear infinite; */
 }
-#gioithieu .container .img #imgin{
+#gioithieu .container .img #imgin {
   transition: 0.1s;
 }
 
@@ -348,6 +348,12 @@ a {
   height: 100vh;
   /* background-color: #39c088; */
 }
+.BgColor {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.2;
+}
 
 /* Button See More */
 #gioithieu a {
@@ -527,7 +533,7 @@ a {
   background-size: cover;
   background-attachment: fixed;
 }
-#pr3{
+#pr3 {
   background: url("../img/1.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;

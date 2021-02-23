@@ -147,9 +147,6 @@ function audio() {
     loopstart();
   }
 
-  // if (document.getElementById('myVideo').pause() == true) {
-  //     document.getElementById('img').classList.remove("rotate");
-  // }
 }
 
 var y = 0;
@@ -202,6 +199,7 @@ var avgCheck = 0;
 function loop(x) {
   if (avgCheck > 20) {
     document.getElementById("img").style.boxShadow = "unset";
+    document.getElementById("BgColor").style.backgroundColor = "unset";
     avgCheck = 0;
     return false;
   } else {
@@ -222,8 +220,8 @@ function loop(x) {
       "px white, 0px 0px " +
       (avg + 150) +
       "px white";
-    // document.getElementById("boxMusic").style.boxShadow =
-    //   "box-shadow: 0 0px " + (avg + 20) + "px white";
+    document.getElementById("BgColor").style.backgroundColor = "rgb("+avg*1.7+","+avg*2+","+avg*3+")";
+
     if (avg == 0) {
       avgCheck++;
     }
